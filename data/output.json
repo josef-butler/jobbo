@@ -1,0 +1,386 @@
+{
+  "makespan": 63,
+  "optimal": true,
+  "schedule": [
+    {
+      "job_id": "job-5",
+      "job_name": "6 Totara Close",
+      "stages": [
+        {
+          "id": "site-prep",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 0,
+          "end": 2
+        },
+        {
+          "id": "foundation",
+          "trade": "concrete",
+          "duration": 2,
+          "start": 2,
+          "end": 4
+        },
+        {
+          "id": "framing",
+          "trade": "carpenter",
+          "duration": 6,
+          "start": 4,
+          "end": 10
+        },
+        {
+          "id": "roof",
+          "trade": "roofer",
+          "duration": 2,
+          "start": 10,
+          "end": 12
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 3,
+          "start": 10,
+          "end": 13
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 10,
+          "end": 12
+        },
+        {
+          "id": "plaster",
+          "trade": "plasterer",
+          "duration": 4,
+          "start": 13,
+          "end": 17
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 3,
+          "start": 17,
+          "end": 20
+        },
+        {
+          "id": "flooring",
+          "trade": "floorer",
+          "duration": 2,
+          "start": 17,
+          "end": 19
+        },
+        {
+          "id": "fit-off",
+          "trade": "carpenter",
+          "duration": 2,
+          "start": 52,
+          "end": 54
+        }
+      ]
+    },
+    {
+      "job_id": "job-4",
+      "job_name": "23 Pohutukawa Ave",
+      "stages": [
+        {
+          "id": "site-prep",
+          "trade": "excavator",
+          "duration": 4,
+          "start": 2,
+          "end": 6
+        },
+        {
+          "id": "foundation",
+          "trade": "concrete",
+          "duration": 5,
+          "start": 6,
+          "end": 11
+        },
+        {
+          "id": "framing",
+          "trade": "carpenter",
+          "duration": 12,
+          "start": 11,
+          "end": 23
+        },
+        {
+          "id": "roof",
+          "trade": "roofer",
+          "duration": 5,
+          "start": 23,
+          "end": 28
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 6,
+          "start": 23,
+          "end": 29
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 4,
+          "start": 23,
+          "end": 27
+        },
+        {
+          "id": "plaster",
+          "trade": "plasterer",
+          "duration": 8,
+          "start": 29,
+          "end": 37
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 7,
+          "start": 37,
+          "end": 44
+        },
+        {
+          "id": "flooring",
+          "trade": "floorer",
+          "duration": 4,
+          "start": 37,
+          "end": 41
+        },
+        {
+          "id": "fit-off",
+          "trade": "carpenter",
+          "duration": 4,
+          "start": 48,
+          "end": 52
+        }
+      ]
+    },
+    {
+      "job_id": "job-1",
+      "job_name": "12 Kowhai Road",
+      "stages": [
+        {
+          "id": "site-prep",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 6,
+          "end": 8
+        },
+        {
+          "id": "foundation",
+          "trade": "concrete",
+          "duration": 3,
+          "start": 11,
+          "end": 14
+        },
+        {
+          "id": "framing",
+          "trade": "carpenter",
+          "duration": 8,
+          "start": 33,
+          "end": 41
+        },
+        {
+          "id": "roof",
+          "trade": "roofer",
+          "duration": 3,
+          "start": 41,
+          "end": 44
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 4,
+          "start": 41,
+          "end": 45
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 3,
+          "start": 41,
+          "end": 44
+        },
+        {
+          "id": "plaster",
+          "trade": "plasterer",
+          "duration": 6,
+          "start": 45,
+          "end": 51
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 5,
+          "start": 51,
+          "end": 56
+        },
+        {
+          "id": "flooring",
+          "trade": "floorer",
+          "duration": 3,
+          "start": 51,
+          "end": 54
+        },
+        {
+          "id": "fit-off",
+          "trade": "carpenter",
+          "duration": 3,
+          "start": 58,
+          "end": 61
+        }
+      ]
+    },
+    {
+      "job_id": "job-3",
+      "job_name": "78 Manuka Lane",
+      "stages": [
+        {
+          "id": "site-prep",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 8,
+          "end": 10
+        },
+        {
+          "id": "foundation",
+          "trade": "concrete",
+          "duration": 3,
+          "start": 14,
+          "end": 17
+        },
+        {
+          "id": "framing",
+          "trade": "carpenter",
+          "duration": 7,
+          "start": 41,
+          "end": 48
+        },
+        {
+          "id": "roof",
+          "trade": "roofer",
+          "duration": 2,
+          "start": 48,
+          "end": 50
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 3,
+          "start": 48,
+          "end": 51
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 48,
+          "end": 50
+        },
+        {
+          "id": "plaster",
+          "trade": "plasterer",
+          "duration": 5,
+          "start": 51,
+          "end": 56
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 4,
+          "start": 56,
+          "end": 60
+        },
+        {
+          "id": "flooring",
+          "trade": "floorer",
+          "duration": 2,
+          "start": 56,
+          "end": 58
+        },
+        {
+          "id": "fit-off",
+          "trade": "carpenter",
+          "duration": 2,
+          "start": 61,
+          "end": 63
+        }
+      ]
+    },
+    {
+      "job_id": "job-2",
+      "job_name": "45 Rimu Terrace",
+      "stages": [
+        {
+          "id": "site-prep",
+          "trade": "excavator",
+          "duration": 3,
+          "start": 10,
+          "end": 13
+        },
+        {
+          "id": "foundation",
+          "trade": "concrete",
+          "duration": 4,
+          "start": 17,
+          "end": 21
+        },
+        {
+          "id": "framing",
+          "trade": "carpenter",
+          "duration": 10,
+          "start": 23,
+          "end": 33
+        },
+        {
+          "id": "roof",
+          "trade": "roofer",
+          "duration": 4,
+          "start": 33,
+          "end": 37
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 5,
+          "start": 33,
+          "end": 38
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 4,
+          "start": 33,
+          "end": 37
+        },
+        {
+          "id": "plaster",
+          "trade": "plasterer",
+          "duration": 7,
+          "start": 38,
+          "end": 45
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 6,
+          "start": 45,
+          "end": 51
+        },
+        {
+          "id": "flooring",
+          "trade": "floorer",
+          "duration": 4,
+          "start": 45,
+          "end": 49
+        },
+        {
+          "id": "fit-off",
+          "trade": "carpenter",
+          "duration": 4,
+          "start": 54,
+          "end": 58
+        }
+      ]
+    }
+  ]
+}

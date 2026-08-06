@@ -1,0 +1,95 @@
+{
+  "trades": [
+    "excavator",
+    "concrete",
+    "carpenter",
+    "roofer",
+    "plumber",
+    "electrician",
+    "plasterer",
+    "painter",
+    "floorer"
+  ],
+  "jobs": [
+    {
+      "id": "job-1",
+      "name": "12 Kowhai Road",
+      "stages": [
+        { "id": "site-prep", "trade": "excavator", "duration": 2 },
+        { "id": "foundation", "trade": "concrete", "duration": 3 },
+        { "id": "framing", "trade": "carpenter", "duration": 8 },
+        { "id": "roof", "trade": "roofer", "duration": 3, "depends_on": ["framing"] },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 4, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 3, "depends_on": ["framing"] },
+        { "id": "plaster", "trade": "plasterer", "duration": 6, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 5, "depends_on": ["plaster"] },
+        { "id": "flooring", "trade": "floorer", "duration": 3, "depends_on": ["plaster"] },
+        { "id": "fit-off", "trade": "carpenter", "duration": 3, "depends_on": ["painting", "flooring"] }
+      ]
+    },
+    {
+      "id": "job-2",
+      "name": "45 Rimu Terrace",
+      "stages": [
+        { "id": "site-prep", "trade": "excavator", "duration": 3 },
+        { "id": "foundation", "trade": "concrete", "duration": 4 },
+        { "id": "framing", "trade": "carpenter", "duration": 10 },
+        { "id": "roof", "trade": "roofer", "duration": 4, "depends_on": ["framing"] },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 5, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 4, "depends_on": ["framing"] },
+        { "id": "plaster", "trade": "plasterer", "duration": 7, "depends_on": ["plumbing-rough", "electrical-rough", "roof"] },
+        { "id": "painting", "trade": "painter", "duration": 6, "depends_on": ["plaster"] },
+        { "id": "flooring", "trade": "floorer", "duration": 4, "depends_on": ["plaster"] },
+        { "id": "fit-off", "trade": "carpenter", "duration": 4, "depends_on": ["painting", "flooring"] }
+      ]
+    },
+    {
+      "id": "job-3",
+      "name": "78 Manuka Lane",
+      "stages": [
+        { "id": "site-prep", "trade": "excavator", "duration": 2 },
+        { "id": "foundation", "trade": "concrete", "duration": 3 },
+        { "id": "framing", "trade": "carpenter", "duration": 7 },
+        { "id": "roof", "trade": "roofer", "duration": 2, "depends_on": ["framing"] },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 3, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 2, "depends_on": ["framing"] },
+        { "id": "plaster", "trade": "plasterer", "duration": 5, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 4, "depends_on": ["plaster"] },
+        { "id": "flooring", "trade": "floorer", "duration": 2, "depends_on": ["plaster"] },
+        { "id": "fit-off", "trade": "carpenter", "duration": 2, "depends_on": ["painting", "flooring"] }
+      ]
+    },
+    {
+      "id": "job-4",
+      "name": "23 Pohutukawa Ave",
+      "stages": [
+        { "id": "site-prep", "trade": "excavator", "duration": 4 },
+        { "id": "foundation", "trade": "concrete", "duration": 5 },
+        { "id": "framing", "trade": "carpenter", "duration": 12 },
+        { "id": "roof", "trade": "roofer", "duration": 5, "depends_on": ["framing"] },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 6, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 4, "depends_on": ["framing"] },
+        { "id": "plaster", "trade": "plasterer", "duration": 8, "depends_on": ["plumbing-rough", "electrical-rough", "roof"] },
+        { "id": "painting", "trade": "painter", "duration": 7, "depends_on": ["plaster"] },
+        { "id": "flooring", "trade": "floorer", "duration": 4, "depends_on": ["plaster"] },
+        { "id": "fit-off", "trade": "carpenter", "duration": 4, "depends_on": ["painting", "flooring"] }
+      ]
+    },
+    {
+      "id": "job-5",
+      "name": "6 Totara Close",
+      "stages": [
+        { "id": "site-prep", "trade": "excavator", "duration": 2 },
+        { "id": "foundation", "trade": "concrete", "duration": 2 },
+        { "id": "framing", "trade": "carpenter", "duration": 6 },
+        { "id": "roof", "trade": "roofer", "duration": 2, "depends_on": ["framing"] },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 3, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 2, "depends_on": ["framing"] },
+        { "id": "plaster", "trade": "plasterer", "duration": 4, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 3, "depends_on": ["plaster"] },
+        { "id": "flooring", "trade": "floorer", "duration": 2, "depends_on": ["plaster"] },
+        { "id": "fit-off", "trade": "carpenter", "duration": 2, "depends_on": ["painting", "flooring"] }
+      ]
+    }
+  ]
+}
