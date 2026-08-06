@@ -45,11 +45,15 @@ After `make solve`, the frontend picks up changes on the next browser refresh.
 
 ## Interview workflow
 
-1. **Requirements gathering:** open `docs/QUESTIONS.md` and `docs/DOMAIN.md`.
-   Fill in the domain matrix with the product owner.
+1. **Requirements gathering:** open `docs/QUESTIONS.md`. Share on screen.
+   Work through Phase 1 (domain model + goal) in ~10-15 min. Capture answers
+   inline. Phase 2 (model refinement) if time permits. Reference
+   `docs/EXAMPLES.md` if the conversation stalls.
 
-2. **Model the scenario:** edit `data/input.json` to match the agreed domain model.
-   Reference `docs/MODELS.md` for which OR-Tools pattern fits the constraints.
+2. **Model the scenario:** ask the AI to generate `data/input.json` from your
+   Phase 1 notes. Ask for a human-readable summary and verify it with the
+   interviewer before proceeding. Reference `docs/MODELS.md` for which OR-Tools
+   pattern fits the constraints.
 
 3. **Solve:** run `make solve`. A schedule appears in `apps/web/public/output.json`.
 
@@ -70,10 +74,10 @@ After `make solve`, the frontend picks up changes on the next browser refresh.
 | `apps/web/src/components/GanttChart.tsx` | Timeline view. Horizontal bars per job. |
 | `apps/web/src/components/JobList.tsx` | Card grid view |
 | `apps/web/src/components/JobDetail.tsx` | Dialog showing stage breakdown per job |
-| `docs/QUESTIONS.md` | Conversation prompts for requirements gathering |
-| `docs/DOMAIN.md` | Glossary matrix. Fill in with the product owner. |
+| `docs/QUESTIONS.md` | Two-phase interview script and live note-taking surface |
 | `docs/MODELS.md` | OR-Tools model catalog and decision guide |
 | `docs/FEATURES.md` | Layered feature roadmap |
+| `docs/EXAMPLES.md` | Conversation prompts if the discussion stalls |
 
 ## AI assistance
 

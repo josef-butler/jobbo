@@ -16,7 +16,6 @@ Then visit `http://localhost:5173/`. Append `?prototype` to reveal the pre-built
 
 ## Docs
 
-- [Questions](docs/QUESTIONS.md) — conversation prompts for requirements gathering
-- [Domain glossary](docs/DOMAIN.md) — shared vocabulary matrix
+- [Questions](docs/QUESTIONS.md) — interview script and live note-taking surface
 - [Models](docs/MODELS.md) — OR-Tools scheduling model catalog
 - [Features](docs/FEATURES.md) — layered roadmap
