@@ -1,5 +1,15 @@
 # Scheduling models — a decision guide
 
+> **⚠️ Interview guard:** This catalog exists so I don't have to fetch API docs
+> live. It must NOT bias me toward complex solutions. The interviewer is testing
+> whether I can listen, ask questions, and build incrementally. Start with the
+> simplest thing that answers the owner's stated need. If the owner says
+> "I just want to see what's happening across my jobs," the answer is a list
+> view or Gantt chart rendering existing data — not a solver. Only reach for
+> scheduling/optimisation when a concrete constraint is named ("but I need to
+> know if two trades will clash"). Let the conversation pull the model;
+> don't push the model into the conversation.
+
 Match domain requirements to the right model, or compose multiple models if the
 problem spans categories. Each entry links to the official OR-Tools documentation.
 
@@ -154,5 +164,255 @@ RCPSP            ← Multiple crews per trade
 All of these are just CP-SAT constraints layered onto the same model. You don't
 switch solvers — you add constraints. Our `solver.py` already does JSP + parallel
 stages. Each of the additions above is a small, incremental code change.
+
+---
+
+## 7. CP-SAT Python API Reference
+
+> Fetched from the [official pdoc](https://or-tools.github.io/docs/pdoc/ortools/sat/python/cp_model.html)
+> and [CP-SAT solver guide](https://developers.google.com/optimization/cp/cp_solver).
+> Current as of OR-Tools ≥9.11.
+
+### Import
+
+```python
+from ortools.sat.python import cp_model
+```
+
+### CpModel — building the model
+
+```python
+model = cp_model.CpModel()
+```
+
+#### Integer variables
+
+```python
+# new_int_var(lb, ub, name) → IntVar
+x = model.new_int_var(0, 10, "x")          # domain [0, 10]
+```
+
+#### Boolean variables
+
+```python
+# new_bool_var(name) → IntVar (domain {0,1})
+b = model.new_bool_var("b")
+```
+
+#### Interval variables
+
+```python
+# new_interval_var(start, size, end, name) → IntervalVar
+# Internally enforces start + size == end.
+start = model.new_int_var(0, horizon, "start_j1_s1")
+end   = model.new_int_var(0, horizon, "end_j1_s1")
+interval = model.new_interval_var(start, 5, end, "int_j1_s1")
+```
+
+#### Optional interval variables (Flexible Job Shop)
+
+```python
+# new_optional_interval_var(start, size, end, is_present, name) → IntervalVar
+# When is_present=False, the interval is ignored by NoOverlap/Cumulative.
+is_present = model.new_bool_var("present")
+opt_interval = model.new_optional_interval_var(start, 3, end, is_present, "opt")
+# Use with ExactlyOne to pick one of N alternatives:
+model.add_exactly_one([present_a, present_b, present_c])
+```
+
+#### Pandas series helpers
+
+```python
+# new_int_var_series, new_bool_var_series, new_interval_var_series,
+# new_optional_interval_var_series — bulk creation with pd.Index
+```
+
+### Constraints
+
+All return a `Constraint` object.
+
+```python
+# Linear constraints — natural Python operators
+model.add(x + y <= 10)
+model.add(x >= y + 3)
+model.add(x == 5)
+model.add(x != y)
+
+# AllDifferent
+model.add_all_different([x, y, z])
+
+# NoOverlap — no two intervals overlap in time (JSP machine constraint)
+model.add_no_overlap([interval_list])           # returns Constraint
+
+# NoOverlap2D — rectangles on a plane
+model.add_no_overlap_2d(x_intervals, y_intervals)
+
+# Cumulative — resource-constrained scheduling (RCPSP)
+# sum(demands[i] for active intervals at time t) <= capacity
+model.add_cumulative(intervals, demands, capacity)
+# intervals: Iterable[IntervalVar]
+# demands:   Iterable[affine expr], each >= 0
+# capacity:  affine expr (constant or variable)
+
+# ExactlyOne / ExactlyK
+model.add_exactly_one([b1, b2, b3])     # Exactly one bool is true
+
+# Element constraint: expressions[index] == target
+model.add_element(index, expressions, target)
+
+# Circuit (for sequencing/tour constraints)
+model.add_circuit(arcs)  # arcs: list of (tail, head, literal) tuples
+
+# Implication: OnlyEnforceIf
+model.add(x == 3).only_enforce_if(b)    # b → (x == 3)
+
+# Minimise / Maximise
+model.minimize(makespan)
+model.maximize(profit)
+```
+
+### CpSolver — solving and inspecting
+
+```python
+solver = cp_model.CpSolver()
+
+# Optional: solver limits
+solver.parameters.max_time_in_seconds = 30.0
+solver.parameters.num_search_workers = 8          # parallel search
+solver.parameters.log_search_progress = True      # stream to stderr
+solver.parameters.enumerate_all_solutions = True  # for callbacks
+
+# Solve
+status = solver.solve(model, solution_callback=None)
+# Status enum: cp_model.OPTIMAL, FEASIBLE, INFEASIBLE, MODEL_INVALID, UNKNOWN
+
+# Read solution values
+solver.value(x)              # int value of a variable or expression
+solver.boolean_value(b)      # bool value
+solver.objective_value       # float → best objective found
+solver.best_objective_bound  # float → proven lower bound (minimisation)
+solver.wall_time             # float → wall-clock solve time
+
+# Response properties
+solver.solve_info            # str → solver stats
+solver.solve_log             # str → full search log (needs log_to_response=True)
+solver.response_proto        # raw CpSolverResponse
+
+# Status check pattern (used in solver.py)
+if status not in (cp_model.OPTIMAL, cp_model.FEASIBLE):
+    print("No solution found.", file=sys.stderr)
+    sys.exit(1)
+```
+
+### Solution callbacks
+
+```python
+class MyCallback(cp_model.CpSolverSolutionCallback):
+    def __init__(self, variables):
+        super().__init__()
+        self._vars = variables
+
+    def on_solution_callback(self):
+        # Called for each solution found (with enumerate_all_solutions=True)
+        vals = [self.value(v) for v in self._vars]
+        print(f"Solution: {vals}")
+
+# Built-in: VarArraySolutionPrinter, ObjectiveSolutionPrinter,
+# VarArrayAndObjectiveSolutionPrinter
+```
+
+### Common patterns for construction scheduling
+
+| Need | Pattern |
+|---|---|
+| Sequential stages in a job | `model.add(start_next >= end_prev)` |
+| One crew per trade (JSP) | `model.add_no_overlap(trade_intervals)` |
+| Multiple crews per trade (RCPSP) | `model.add_cumulative(intervals, [1]*n, crew_count)` |
+| Flexible assignment (plumber OR gasfitter) | `new_optional_interval_var` + `add_exactly_one` |
+| Concrete curing delay | `model.add(start_framing >= end_pour + 2)` |
+| Hard deadline | `model.add(job_end <= deadline)` |
+| Soft deadline with penalty | `model.minimize(makespan + sum(penalty * lateness))` |
+| Rescheduling | Fix completed tasks: `model.add(start == known_start)`; re-solve rest |
+| No weekends | Block out days via interval constraints on a calendar |
+
+---
+
+## 8. React Native / Expo Quick Reference
+
+> For Tier 3 mobile features. React Native shares React's component model
+> (hooks, state, props) but replaces DOM with native components.
+
+### Project setup
+
+```bash
+npx create-expo-app@latest JobboMobile --template blank-typescript
+cd JobboMobile
+npx expo start    # QR code → Expo Go on device; w → web
+```
+
+### Key differences from React (web)
+
+| Web (React DOM) | React Native |
+|---|---|
+| `<div>`, `<span>` | `<View>`, `<Text>` |
+| CSS / className | `StyleSheet.create({...})` objects |
+| `onClick` | `onPress` (TouchableOpacity, Pressable) |
+| `<input>` | `<TextInput>` |
+| Flexbox (default column) | Flexbox (default column, same API) |
+| Browser navigation | Expo Router (file-based, same patterns) |
+| `fetch` | `fetch` (same) |
+
+### Core components
+
+```tsx
+import { View, Text, StyleSheet, TextInput, Pressable,
+         ScrollView, FlatList, Modal, ActivityIndicator } from 'react-native';
+
+<View style={styles.container}>
+  <Text style={styles.title}>Jobbo</Text>
+  <TextInput value={text} onChangeText={setText} placeholder="Search jobs" />
+  <Pressable onPress={handlePress}>
+    <Text>Tap me</Text>
+  </Pressable>
+  <FlatList
+    data={jobs}
+    renderItem={({ item }) => <JobCard job={item} />}
+    keyExtractor={item => item.id}
+  />
+</View>
+
+const styles = StyleSheet.create({
+  container: { flex: 1, padding: 16 },
+  title: { fontSize: 24, fontWeight: 'bold' }
+});
+```
+
+### Data layer
+
+- **React Query** works the same way — same `useQuery`/`useMutation` API.
+- **JSON fetch** from the same `output.json` endpoint or a hosted API.
+- Local state: `useState`, `useReducer` — identical to React web.
+
+### Navigation (Expo Router)
+
+```
+app/
+  _layout.tsx      → Stack or Tab navigator
+  index.tsx        → Home screen
+  jobs/[id].tsx    → Job detail (dynamic route)
+```
+
+### When the interview asks about mobile
+
+1. **Start with Expo** — it's the recommended React Native framework.
+2. **Reuse the same JSON I/O pattern** — `solver.py` writes `output.json`, mobile
+   fetches it (or a lightweight API wrapper).
+3. **Component logic ports directly** — hooks, React Query, state management all
+   carry over. Replace `<div>` with `<View>`, Tailwind `className` with
+   `StyleSheet.create`.
+4. **Gantt chart replacement** — `react-native-svg` for custom drawing, or
+   `victory-native` for charts.
+5. **PWA as a stepping stone** — if native tooling is too heavy mid-interview,
+   a PWA (service worker + manifest) gives mobile access without Expo setup.
 
 

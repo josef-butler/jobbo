@@ -45,7 +45,7 @@ _These surface late in the conversation — "what about when we grow to 200 jobs
 
 | Feature | What it does | Approach |
 |---|---|---|
-| **Mobile view for trades on site** | Tradesperson sees their assigned jobs for the day, can mark stages complete | PWA or React Native (matching the job ad's stack). New app in `apps/mobile/` |
+| **Mobile view for trades on site** | Tradesperson sees their assigned jobs for the day, can mark stages complete | PWA or React Native (matching the job ad's stack). New app in `apps/mobile/`. See [REACT_NATIVE.md](./REACT_NATIVE.md) for setup & strategy. |
 | **Multi-user with roles** | Owner vs project manager vs tradesperson — different views and permissions | Auth layer + row-level filtering. Not a solver change |
 | **Notifications** | Alert when a stage finishes, a delay cascades, or a trade is about to be idle | Email or push. Hook into solver output diff: compare old schedule to new, surface changes |
 | **Material / equipment tracking** | Materials needed per stage, delivery lead times, constraints ("can't start framing until timber arrives") | New resource type in the solver: non-renewable resources with arrival dates. CP-SAT handles this via additional interval constraints |
