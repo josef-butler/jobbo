@@ -7,16 +7,16 @@ problem spans categories. Each entry links to the official OR-Tools documentatio
 
 ## Quick-match table
 
-| Requirement                                                       | Model(s)                 | Why                                                              |
-| ------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------- |
-| One crew per trade, stages always in order                          | **Job Shop**             | Classic JSP — tasks on machines, precedence                      |
-| "We have 3 plumbing crews, 2 sparky crews"                          | **RCPSP** (cumulative)   | JSP but with capacity > 1 per resource                           |
-| "Plumber or gasfitter can do the rough-in"                          | **Flexible Job Shop**    | Tasks can run on any machine from a set                          |
-| "Bob works Mon–Thu, Alice does Tue–Fri"                             | **Employee Scheduling**  | Assign individuals to shifts; constrain availability             |
-| "Each job has a hard deadline, late jobs cost $X/day"               | **CP-SAT with penalties**| Objective shifts from makespan to cost-minimisation              |
-| "Trades don't work weekends, concrete needs 2 days to cure"         | **CP-SAT calendars**     | Banned intervals + minimum delays between stages                 |
-| "A delay on one job cascades — how do we re-plan?"                  | **CP-SAT re-solve**      | Fix the past (already-started tasks) and re-optimise the future  |
-| "We just need to assign the right trade to each job" (no timeline)  | **Assignment**           | Pure matching — no time axis                                     |
+| Model | Name | Requirement | Why |
+|---|---|---|---|
+| **JSP** | Job Shop Problem | One crew per trade, stages always in order | Fixed sequence of tasks. Each trade = one machine. One thing at a time. |
+| **RCPSP** | Resource-Constrained Project Scheduling | "We have 3 plumbing crews, 2 sparky crews" | Like JSP but each trade has a capacity > 1. Multiple stages of the same trade can overlap. |
+| **FJSP** | Flexible Job Shop | "Plumber or gasfitter can do the rough-in" | A stage can run on any trade from a set. Solver picks which one. |
+| — | Employee Scheduling | "Bob works Mon–Thu, Alice does Tue–Fri" | Named individuals with personal availability. More granular than anonymous crews. |
+| — | CP-SAT with penalties<br><small>Constraint Programming + Boolean Satisfiability</small> | "Each job has a hard deadline, late jobs cost $X/day" | Objective shifts from "finish fast" to "minimise cost of being late." |
+| — | CP-SAT calendars<br><small>Constraint Programming + Boolean Satisfiability</small> | "No weekends, concrete needs 2 days to cure" | Block out dates (weekends, holidays) and enforce minimum gaps between stages. |
+| — | CP-SAT re-solve<br><small>Constraint Programming + Boolean Satisfiability</small> | "A delay cascaded — how do we re-plan?" | Lock in tasks already started, free up the rest, re-run from today. |
+| — | Assignment | "Assign trades to jobs" (no timeline) | Pure matching problem. No dates, no sequence, just who does what.
 
 ---
 

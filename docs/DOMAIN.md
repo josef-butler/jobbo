@@ -13,7 +13,21 @@ _Type answers here as they come. Transfer structured bits to the matrix below._
 
 ---
 
+## Modeling vocabulary
+
+_These are our terms. The owner will use different words — we translate._
+
+| Concept | Definition |
+|---|---|
+| **Dependency** | Stage B cannot start until Stage A finishes |
+| **Parallel** | Two stages that can happen at the same time (no dependency between them) |
+| **Makespan** | The total time from the earliest job start to the latest job finish |
+| **Capacity** | How many jobs a trade can work on simultaneously |
+| **Template** | A reusable sequence of stages shared across jobs of the same type |
+
 ## Concept matrix
+
+_Fill in the right column during the conversation._
 
 | Concept | Generic definition | Context-specific definition |
 |---|---|---|
@@ -22,12 +36,7 @@ _Type answers here as they come. Transfer structured bits to the matrix below._
 | **Trade** | The type of work (plumbing, framing, electrical, etc.) | |
 | **Crew** | The people or company performing the work | |
 | **Duration** | How long a stage takes, in days | |
-| **Dependency** | Stage B cannot start until Stage A finishes | |
 | **Deadline** | A fixed date by which a job must be complete | |
-| **Makespan** | The total time from the earliest job start to the latest job finish | |
-| **Capacity** | How many jobs a trade can work on simultaneously | |
-| **Parallel** | Two stages that can happen at the same time (no dependency between them) | |
-| **Template** | A reusable sequence of stages shared across jobs of the same type | |
 
 ---
 
