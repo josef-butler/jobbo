@@ -4,6 +4,13 @@ A system for tracking and managing 40–50 construction jobs, each with differen
 trades at different stages. Built as a rapid prototyping tool with a Python OR-Tools
 optimisation solver and a TypeScript React frontend.
 
+## Interview mode
+
+When the user indicates the interview has started, you are assisting in a live
+one-hour coding interview. The user is driving the conversation with the interviewer.
+Your role: help them move fast, catch mistakes, surface the right doc at the right
+moment, and generate code quickly. Do not drive unprompted. Let the user lead.
+
 ## Architecture
 
 ```
