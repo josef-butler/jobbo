@@ -1,308 +1,514 @@
 {
-  "makespan": 63,
-  "optimal": true,
+  "makespan": 84,
+  "optimal": false,
   "schedule": [
-    {
-      "job_id": "job-5",
-      "job_name": "6 Totara Close",
-      "stages": [
-        {
-          "id": "site-prep",
-          "trade": "excavator",
-          "duration": 2,
-          "start": 0,
-          "end": 2
-        },
-        {
-          "id": "foundation",
-          "trade": "concrete",
-          "duration": 2,
-          "start": 2,
-          "end": 4
-        },
-        {
-          "id": "framing",
-          "trade": "carpenter",
-          "duration": 6,
-          "start": 4,
-          "end": 10
-        },
-        {
-          "id": "roof",
-          "trade": "roofer",
-          "duration": 2,
-          "start": 10,
-          "end": 12
-        },
-        {
-          "id": "plumbing-rough",
-          "trade": "plumber",
-          "duration": 3,
-          "start": 10,
-          "end": 13
-        },
-        {
-          "id": "electrical-rough",
-          "trade": "electrician",
-          "duration": 2,
-          "start": 10,
-          "end": 12
-        },
-        {
-          "id": "plaster",
-          "trade": "plasterer",
-          "duration": 4,
-          "start": 13,
-          "end": 17
-        },
-        {
-          "id": "painting",
-          "trade": "painter",
-          "duration": 3,
-          "start": 17,
-          "end": 20
-        },
-        {
-          "id": "flooring",
-          "trade": "floorer",
-          "duration": 2,
-          "start": 17,
-          "end": 19
-        },
-        {
-          "id": "fit-off",
-          "trade": "carpenter",
-          "duration": 2,
-          "start": 52,
-          "end": 54
-        }
-      ]
-    },
-    {
-      "job_id": "job-4",
-      "job_name": "23 Pohutukawa Ave",
-      "stages": [
-        {
-          "id": "site-prep",
-          "trade": "excavator",
-          "duration": 4,
-          "start": 2,
-          "end": 6
-        },
-        {
-          "id": "foundation",
-          "trade": "concrete",
-          "duration": 5,
-          "start": 6,
-          "end": 11
-        },
-        {
-          "id": "framing",
-          "trade": "carpenter",
-          "duration": 12,
-          "start": 11,
-          "end": 23
-        },
-        {
-          "id": "roof",
-          "trade": "roofer",
-          "duration": 5,
-          "start": 23,
-          "end": 28
-        },
-        {
-          "id": "plumbing-rough",
-          "trade": "plumber",
-          "duration": 6,
-          "start": 23,
-          "end": 29
-        },
-        {
-          "id": "electrical-rough",
-          "trade": "electrician",
-          "duration": 4,
-          "start": 23,
-          "end": 27
-        },
-        {
-          "id": "plaster",
-          "trade": "plasterer",
-          "duration": 8,
-          "start": 29,
-          "end": 37
-        },
-        {
-          "id": "painting",
-          "trade": "painter",
-          "duration": 7,
-          "start": 37,
-          "end": 44
-        },
-        {
-          "id": "flooring",
-          "trade": "floorer",
-          "duration": 4,
-          "start": 37,
-          "end": 41
-        },
-        {
-          "id": "fit-off",
-          "trade": "carpenter",
-          "duration": 4,
-          "start": 48,
-          "end": 52
-        }
-      ]
-    },
-    {
-      "job_id": "job-1",
-      "job_name": "12 Kowhai Road",
-      "stages": [
-        {
-          "id": "site-prep",
-          "trade": "excavator",
-          "duration": 2,
-          "start": 6,
-          "end": 8
-        },
-        {
-          "id": "foundation",
-          "trade": "concrete",
-          "duration": 3,
-          "start": 11,
-          "end": 14
-        },
-        {
-          "id": "framing",
-          "trade": "carpenter",
-          "duration": 8,
-          "start": 33,
-          "end": 41
-        },
-        {
-          "id": "roof",
-          "trade": "roofer",
-          "duration": 3,
-          "start": 41,
-          "end": 44
-        },
-        {
-          "id": "plumbing-rough",
-          "trade": "plumber",
-          "duration": 4,
-          "start": 41,
-          "end": 45
-        },
-        {
-          "id": "electrical-rough",
-          "trade": "electrician",
-          "duration": 3,
-          "start": 41,
-          "end": 44
-        },
-        {
-          "id": "plaster",
-          "trade": "plasterer",
-          "duration": 6,
-          "start": 45,
-          "end": 51
-        },
-        {
-          "id": "painting",
-          "trade": "painter",
-          "duration": 5,
-          "start": 51,
-          "end": 56
-        },
-        {
-          "id": "flooring",
-          "trade": "floorer",
-          "duration": 3,
-          "start": 51,
-          "end": 54
-        },
-        {
-          "id": "fit-off",
-          "trade": "carpenter",
-          "duration": 3,
-          "start": 58,
-          "end": 61
-        }
-      ]
-    },
     {
       "job_id": "job-3",
       "job_name": "78 Manuka Lane",
       "stages": [
         {
-          "id": "site-prep",
+          "id": "foundations",
           "trade": "excavator",
           "duration": 2,
-          "start": 8,
-          "end": 10
+          "start": 0,
+          "end": 2,
+          "crew": 0
         },
         {
-          "id": "foundation",
+          "id": "slab",
           "trade": "concrete",
-          "duration": 3,
-          "start": 14,
-          "end": 17
+          "duration": 2,
+          "start": 2,
+          "end": 4,
+          "crew": 0
         },
         {
           "id": "framing",
-          "trade": "carpenter",
+          "trade": "framer",
           "duration": 7,
-          "start": 41,
-          "end": 48
-        },
-        {
-          "id": "roof",
-          "trade": "roofer",
-          "duration": 2,
-          "start": 48,
-          "end": 50
+          "start": 4,
+          "end": 11,
+          "crew": 0
         },
         {
           "id": "plumbing-rough",
           "trade": "plumber",
           "duration": 3,
-          "start": 48,
-          "end": 51
+          "start": 34,
+          "end": 37,
+          "crew": 0
         },
         {
           "id": "electrical-rough",
           "trade": "electrician",
           "duration": 2,
-          "start": 48,
-          "end": 50
+          "start": 35,
+          "end": 37,
+          "crew": 1
         },
         {
-          "id": "plaster",
-          "trade": "plasterer",
+          "id": "gib",
+          "trade": "gib-installer",
           "duration": 5,
-          "start": 51,
-          "end": 56
+          "start": 37,
+          "end": 42,
+          "crew": 0
         },
         {
           "id": "painting",
           "trade": "painter",
           "duration": 4,
-          "start": 56,
-          "end": 60
+          "start": 44,
+          "end": 48,
+          "crew": 1
         },
         {
-          "id": "flooring",
-          "trade": "floorer",
+          "id": "kitchen",
+          "trade": "kitchen-installer",
           "duration": 2,
-          "start": 56,
-          "end": 58
+          "start": 48,
+          "end": 50,
+          "crew": 0
         },
         {
-          "id": "fit-off",
-          "trade": "carpenter",
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 2,
+          "start": 48,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 3,
+          "start": 48,
+          "end": 51,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 51,
+          "end": 53,
+          "crew": 1
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 1,
+          "start": 50,
+          "end": 51,
+          "crew": 1
+        }
+      ]
+    },
+    {
+      "job_id": "job-11",
+      "job_name": "15 Titoki Place",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 2,
+          "end": 4,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 2,
+          "start": 4,
+          "end": 6,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 7,
+          "start": 6,
+          "end": 13,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 3,
+          "start": 13,
+          "end": 16,
+          "crew": 0
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 13,
+          "end": 15,
+          "crew": 0
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 5,
+          "start": 16,
+          "end": 21,
+          "crew": 0
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 4,
+          "start": 21,
+          "end": 25,
+          "crew": 0
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 3,
+          "start": 41,
+          "end": 44,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
           "duration": 2,
           "start": 61,
-          "end": 63
+          "end": 63,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 3,
+          "start": 25,
+          "end": 28,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 25,
+          "end": 27,
+          "crew": 1
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 1,
+          "start": 83,
+          "end": 84,
+          "crew": 1
+        }
+      ]
+    },
+    {
+      "job_id": "job-7",
+      "job_name": "34 Kauri Drive",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 4,
+          "end": 6,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 3,
+          "start": 6,
+          "end": 9,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 8,
+          "start": 11,
+          "end": 19,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 4,
+          "start": 19,
+          "end": 23,
+          "crew": 0
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 3,
+          "start": 19,
+          "end": 22,
+          "crew": 0
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 6,
+          "start": 23,
+          "end": 29,
+          "crew": 0
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 5,
+          "start": 29,
+          "end": 34,
+          "crew": 0
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 3,
+          "start": 34,
+          "end": 37,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 3,
+          "start": 41,
+          "end": 44,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 3,
+          "start": 34,
+          "end": 37,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 34,
+          "end": 36,
+          "crew": 1
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 34,
+          "end": 36,
+          "crew": 0
+        }
+      ]
+    },
+    {
+      "job_id": "job-8",
+      "job_name": "57 Harakeke Way",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 3,
+          "start": 6,
+          "end": 9,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 4,
+          "start": 9,
+          "end": 13,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 11,
+          "start": 13,
+          "end": 24,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 5,
+          "start": 24,
+          "end": 29,
+          "crew": 0
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 4,
+          "start": 24,
+          "end": 28,
+          "crew": 0
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 8,
+          "start": 29,
+          "end": 37,
+          "crew": 0
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 6,
+          "start": 37,
+          "end": 43,
+          "crew": 0
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 4,
+          "start": 44,
+          "end": 48,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 4,
+          "start": 44,
+          "end": 48,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 5,
+          "start": 43,
+          "end": 48,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 3,
+          "start": 43,
+          "end": 46,
+          "crew": 0
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 43,
+          "end": 45,
+          "crew": 0
+        }
+      ]
+    },
+    {
+      "job_id": "job-13",
+      "job_name": "67 Rewarewa Lane",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 9,
+          "end": 11,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 2,
+          "start": 13,
+          "end": 15,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 7,
+          "start": 56,
+          "end": 63,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 3,
+          "start": 63,
+          "end": 66,
+          "crew": 1
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 64,
+          "end": 66,
+          "crew": 0
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 5,
+          "start": 66,
+          "end": 71,
+          "crew": 0
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 4,
+          "start": 71,
+          "end": 75,
+          "crew": 0
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 2,
+          "start": 75,
+          "end": 77,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 2,
+          "start": 75,
+          "end": 77,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 3,
+          "start": 77,
+          "end": 80,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 75,
+          "end": 77,
+          "crew": 0
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 1,
+          "start": 75,
+          "end": 76,
+          "crew": 0
         }
       ]
     },
@@ -311,76 +517,2692 @@
       "job_name": "45 Rimu Terrace",
       "stages": [
         {
-          "id": "site-prep",
+          "id": "foundations",
           "trade": "excavator",
           "duration": 3,
-          "start": 10,
-          "end": 13
+          "start": 11,
+          "end": 14,
+          "crew": 0
         },
         {
-          "id": "foundation",
+          "id": "slab",
           "trade": "concrete",
           "duration": 4,
-          "start": 17,
-          "end": 21
+          "start": 15,
+          "end": 19,
+          "crew": 0
         },
         {
           "id": "framing",
-          "trade": "carpenter",
+          "trade": "framer",
           "duration": 10,
-          "start": 23,
-          "end": 33
-        },
-        {
-          "id": "roof",
-          "trade": "roofer",
-          "duration": 4,
-          "start": 33,
-          "end": 37
+          "start": 19,
+          "end": 29,
+          "crew": 0
         },
         {
           "id": "plumbing-rough",
           "trade": "plumber",
           "duration": 5,
-          "start": 33,
-          "end": 38
+          "start": 29,
+          "end": 34,
+          "crew": 0
         },
         {
           "id": "electrical-rough",
           "trade": "electrician",
           "duration": 4,
-          "start": 33,
-          "end": 37
+          "start": 29,
+          "end": 33,
+          "crew": 0
         },
         {
-          "id": "plaster",
-          "trade": "plasterer",
+          "id": "gib",
+          "trade": "gib-installer",
           "duration": 7,
-          "start": 38,
-          "end": 45
+          "start": 35,
+          "end": 42,
+          "crew": 1
         },
         {
           "id": "painting",
           "trade": "painter",
           "duration": 6,
-          "start": 45,
-          "end": 51
+          "start": 44,
+          "end": 50,
+          "crew": 0
         },
         {
-          "id": "flooring",
-          "trade": "floorer",
+          "id": "kitchen",
+          "trade": "kitchen-installer",
           "duration": 4,
-          "start": 45,
-          "end": 49
+          "start": 50,
+          "end": 54,
+          "crew": 0
         },
         {
-          "id": "fit-off",
-          "trade": "carpenter",
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 4,
+          "start": 50,
+          "end": 54,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 5,
+          "start": 69,
+          "end": 74,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 3,
+          "start": 51,
+          "end": 54,
+          "crew": 0
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 50,
+          "end": 52,
+          "crew": 0
+        }
+      ]
+    },
+    {
+      "job_id": "job-4",
+      "job_name": "23 Pohutukawa Ave",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 4,
+          "start": 14,
+          "end": 18,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 5,
+          "start": 19,
+          "end": 24,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 12,
+          "start": 24,
+          "end": 36,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 6,
+          "start": 36,
+          "end": 42,
+          "crew": 1
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 4,
+          "start": 36,
+          "end": 40,
+          "crew": 0
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 8,
+          "start": 42,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 7,
+          "start": 50,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 5,
+          "start": 57,
+          "end": 62,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 4,
+          "start": 57,
+          "end": 61,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 5,
+          "start": 57,
+          "end": 62,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 3,
+          "start": 58,
+          "end": 61,
+          "crew": 0
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 3,
+          "start": 57,
+          "end": 60,
+          "crew": 1
+        }
+      ]
+    },
+    {
+      "job_id": "job-1",
+      "job_name": "12 Kowhai Road",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 18,
+          "end": 20,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 3,
+          "start": 28,
+          "end": 31,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 8,
+          "start": 46,
+          "end": 54,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
           "duration": 4,
           "start": 54,
-          "end": 58
+          "end": 58,
+          "crew": 0
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 3,
+          "start": 54,
+          "end": 57,
+          "crew": 1
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 6,
+          "start": 58,
+          "end": 64,
+          "crew": 0
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 5,
+          "start": 64,
+          "end": 69,
+          "crew": 0
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 3,
+          "start": 69,
+          "end": 72,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 3,
+          "start": 69,
+          "end": 72,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 4,
+          "start": 69,
+          "end": 73,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 71,
+          "end": 73,
+          "crew": 0
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 69,
+          "end": 71,
+          "crew": 1
+        }
+      ]
+    },
+    {
+      "job_id": "job-6",
+      "job_name": "91 Nikau Street",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 3,
+          "start": 20,
+          "end": 23,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 3,
+          "start": 24,
+          "end": 27,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 9,
+          "start": 29,
+          "end": 38,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 4,
+          "start": 38,
+          "end": 42,
+          "crew": 0
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 3,
+          "start": 38,
+          "end": 41,
+          "crew": 1
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 6,
+          "start": 42,
+          "end": 48,
+          "crew": 1
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 5,
+          "start": 48,
+          "end": 53,
+          "crew": 1
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 3,
+          "start": 54,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 3,
+          "start": 54,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 4,
+          "start": 53,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 53,
+          "end": 55,
+          "crew": 1
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 53,
+          "end": 55,
+          "crew": 0
+        }
+      ]
+    },
+    {
+      "job_id": "job-14",
+      "job_name": "29 Miro Grove",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 3,
+          "start": 23,
+          "end": 26,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 3,
+          "start": 47,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 8,
+          "start": 54,
+          "end": 62,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 4,
+          "start": 62,
+          "end": 66,
+          "crew": 0
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 3,
+          "start": 62,
+          "end": 65,
+          "crew": 1
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 6,
+          "start": 66,
+          "end": 72,
+          "crew": 1
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 5,
+          "start": 72,
+          "end": 77,
+          "crew": 1
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 3,
+          "start": 77,
+          "end": 80,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 3,
+          "start": 77,
+          "end": 80,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 4,
+          "start": 80,
+          "end": 84,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 82,
+          "end": 84,
+          "crew": 1
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 77,
+          "end": 79,
+          "crew": 0
+        }
+      ]
+    },
+    {
+      "job_id": "job-12",
+      "job_name": "42 Matai Road",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 4,
+          "start": 26,
+          "end": 30,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 4,
+          "start": 31,
+          "end": 35,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 10,
+          "start": 36,
+          "end": 46,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 5,
+          "start": 46,
+          "end": 51,
+          "crew": 0
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 4,
+          "start": 46,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 7,
+          "start": 52,
+          "end": 59,
+          "crew": 1
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 6,
+          "start": 59,
+          "end": 65,
+          "crew": 1
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 4,
+          "start": 65,
+          "end": 69,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 3,
+          "start": 66,
+          "end": 69,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 4,
+          "start": 65,
+          "end": 69,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 66,
+          "end": 68,
+          "crew": 1
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 65,
+          "end": 67,
+          "crew": 1
+        }
+      ]
+    },
+    {
+      "job_id": "job-10",
+      "job_name": "88 Kanuka Rise",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 3,
+          "start": 30,
+          "end": 33,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 3,
+          "start": 35,
+          "end": 38,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 9,
+          "start": 38,
+          "end": 47,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 4,
+          "start": 47,
+          "end": 51,
+          "crew": 1
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 3,
+          "start": 47,
+          "end": 50,
+          "crew": 1
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 6,
+          "start": 51,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 5,
+          "start": 57,
+          "end": 62,
+          "crew": 0
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 3,
+          "start": 62,
+          "end": 65,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 3,
+          "start": 63,
+          "end": 66,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 4,
+          "start": 74,
+          "end": 78,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 66,
+          "end": 68,
+          "crew": 0
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 62,
+          "end": 64,
+          "crew": 0
+        }
+      ]
+    },
+    {
+      "job_id": "job-15",
+      "job_name": "53 Kotukutuku Street",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 33,
+          "end": 35,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 3,
+          "start": 44,
+          "end": 47,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 9,
+          "start": 47,
+          "end": 56,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 4,
+          "start": 56,
+          "end": 60,
+          "crew": 1
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 3,
+          "start": 56,
+          "end": 59,
+          "crew": 0
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 6,
+          "start": 60,
+          "end": 66,
+          "crew": 1
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 5,
+          "start": 67,
+          "end": 72,
+          "crew": 1
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 3,
+          "start": 72,
+          "end": 75,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 3,
+          "start": 72,
+          "end": 75,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 4,
+          "start": 73,
+          "end": 77,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 72,
+          "end": 74,
+          "crew": 1
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 72,
+          "end": 74,
+          "crew": 0
+        }
+      ]
+    },
+    {
+      "job_id": "job-9",
+      "job_name": "3 Wattle Crescent",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 35,
+          "end": 37,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 2,
+          "start": 58,
+          "end": 60,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 6,
+          "start": 63,
+          "end": 69,
+          "crew": 0
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 3,
+          "start": 69,
+          "end": 72,
+          "crew": 1
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 70,
+          "end": 72,
+          "crew": 0
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 5,
+          "start": 72,
+          "end": 77,
+          "crew": 1
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 4,
+          "start": 77,
+          "end": 81,
+          "crew": 1
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 2,
+          "start": 82,
+          "end": 84,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 2,
+          "start": 82,
+          "end": 84,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 3,
+          "start": 81,
+          "end": 84,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 2,
+          "start": 82,
+          "end": 84,
+          "crew": 0
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 1,
+          "start": 81,
+          "end": 82,
+          "crew": 0
+        }
+      ]
+    },
+    {
+      "job_id": "job-5",
+      "job_name": "6 Totara Close",
+      "stages": [
+        {
+          "id": "foundations",
+          "trade": "excavator",
+          "duration": 2,
+          "start": 37,
+          "end": 39,
+          "crew": 0
+        },
+        {
+          "id": "slab",
+          "trade": "concrete",
+          "duration": 2,
+          "start": 60,
+          "end": 62,
+          "crew": 0
+        },
+        {
+          "id": "framing",
+          "trade": "framer",
+          "duration": 6,
+          "start": 62,
+          "end": 68,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-rough",
+          "trade": "plumber",
+          "duration": 3,
+          "start": 68,
+          "end": 71,
+          "crew": 0
+        },
+        {
+          "id": "electrical-rough",
+          "trade": "electrician",
+          "duration": 2,
+          "start": 68,
+          "end": 70,
+          "crew": 0
+        },
+        {
+          "id": "gib",
+          "trade": "gib-installer",
+          "duration": 4,
+          "start": 71,
+          "end": 75,
+          "crew": 0
+        },
+        {
+          "id": "painting",
+          "trade": "painter",
+          "duration": 3,
+          "start": 75,
+          "end": 78,
+          "crew": 0
+        },
+        {
+          "id": "kitchen",
+          "trade": "kitchen-installer",
+          "duration": 2,
+          "start": 80,
+          "end": 82,
+          "crew": 0
+        },
+        {
+          "id": "bathroom",
+          "trade": "bathroom-installer",
+          "duration": 2,
+          "start": 80,
+          "end": 82,
+          "crew": 0
+        },
+        {
+          "id": "tiling-flooring",
+          "trade": "tiler-floorer",
+          "duration": 3,
+          "start": 78,
+          "end": 81,
+          "crew": 1
+        },
+        {
+          "id": "plumbing-fit-off",
+          "trade": "plumber",
+          "duration": 1,
+          "start": 78,
+          "end": 79,
+          "crew": 0
+        },
+        {
+          "id": "electrical-fit-out",
+          "trade": "electrician",
+          "duration": 1,
+          "start": 83,
+          "end": 84,
+          "crew": 0
         }
       ]
     }
-  ]
+  ],
+  "trade_schedule": {
+    "excavator": {
+      "crews": 1,
+      "assignments": [
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "foundations",
+          "duration": 2,
+          "start": 0,
+          "end": 2,
+          "crew": 0
+        },
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "foundations",
+          "duration": 2,
+          "start": 2,
+          "end": 4,
+          "crew": 0
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "foundations",
+          "duration": 2,
+          "start": 4,
+          "end": 6,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "foundations",
+          "duration": 3,
+          "start": 6,
+          "end": 9,
+          "crew": 0
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "foundations",
+          "duration": 2,
+          "start": 9,
+          "end": 11,
+          "crew": 0
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "foundations",
+          "duration": 3,
+          "start": 11,
+          "end": 14,
+          "crew": 0
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "foundations",
+          "duration": 4,
+          "start": 14,
+          "end": 18,
+          "crew": 0
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "foundations",
+          "duration": 2,
+          "start": 18,
+          "end": 20,
+          "crew": 0
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "foundations",
+          "duration": 3,
+          "start": 20,
+          "end": 23,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "foundations",
+          "duration": 3,
+          "start": 23,
+          "end": 26,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "foundations",
+          "duration": 4,
+          "start": 26,
+          "end": 30,
+          "crew": 0
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "foundations",
+          "duration": 3,
+          "start": 30,
+          "end": 33,
+          "crew": 0
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "foundations",
+          "duration": 2,
+          "start": 33,
+          "end": 35,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "foundations",
+          "duration": 2,
+          "start": 35,
+          "end": 37,
+          "crew": 0
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "foundations",
+          "duration": 2,
+          "start": 37,
+          "end": 39,
+          "crew": 0
+        }
+      ]
+    },
+    "concrete": {
+      "crews": 1,
+      "assignments": [
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "slab",
+          "duration": 2,
+          "start": 2,
+          "end": 4,
+          "crew": 0
+        },
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "slab",
+          "duration": 2,
+          "start": 4,
+          "end": 6,
+          "crew": 0
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "slab",
+          "duration": 3,
+          "start": 6,
+          "end": 9,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "slab",
+          "duration": 4,
+          "start": 9,
+          "end": 13,
+          "crew": 0
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "slab",
+          "duration": 2,
+          "start": 13,
+          "end": 15,
+          "crew": 0
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "slab",
+          "duration": 4,
+          "start": 15,
+          "end": 19,
+          "crew": 0
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "slab",
+          "duration": 5,
+          "start": 19,
+          "end": 24,
+          "crew": 0
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "slab",
+          "duration": 3,
+          "start": 24,
+          "end": 27,
+          "crew": 0
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "slab",
+          "duration": 3,
+          "start": 28,
+          "end": 31,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "slab",
+          "duration": 4,
+          "start": 31,
+          "end": 35,
+          "crew": 0
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "slab",
+          "duration": 3,
+          "start": 35,
+          "end": 38,
+          "crew": 0
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "slab",
+          "duration": 3,
+          "start": 44,
+          "end": 47,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "slab",
+          "duration": 3,
+          "start": 47,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "slab",
+          "duration": 2,
+          "start": 58,
+          "end": 60,
+          "crew": 0
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "slab",
+          "duration": 2,
+          "start": 60,
+          "end": 62,
+          "crew": 0
+        }
+      ]
+    },
+    "framer": {
+      "crews": 2,
+      "assignments": [
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "framing",
+          "duration": 7,
+          "start": 4,
+          "end": 11,
+          "crew": 0
+        },
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "framing",
+          "duration": 7,
+          "start": 6,
+          "end": 13,
+          "crew": 1
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "framing",
+          "duration": 8,
+          "start": 11,
+          "end": 19,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "framing",
+          "duration": 11,
+          "start": 13,
+          "end": 24,
+          "crew": 1
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "framing",
+          "duration": 10,
+          "start": 19,
+          "end": 29,
+          "crew": 0
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "framing",
+          "duration": 12,
+          "start": 24,
+          "end": 36,
+          "crew": 1
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "framing",
+          "duration": 9,
+          "start": 29,
+          "end": 38,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "framing",
+          "duration": 10,
+          "start": 36,
+          "end": 46,
+          "crew": 1
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "framing",
+          "duration": 9,
+          "start": 38,
+          "end": 47,
+          "crew": 0
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "framing",
+          "duration": 8,
+          "start": 46,
+          "end": 54,
+          "crew": 1
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "framing",
+          "duration": 9,
+          "start": 47,
+          "end": 56,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "framing",
+          "duration": 8,
+          "start": 54,
+          "end": 62,
+          "crew": 1
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "framing",
+          "duration": 7,
+          "start": 56,
+          "end": 63,
+          "crew": 0
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "framing",
+          "duration": 6,
+          "start": 62,
+          "end": 68,
+          "crew": 1
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "framing",
+          "duration": 6,
+          "start": 63,
+          "end": 69,
+          "crew": 0
+        }
+      ]
+    },
+    "plumber": {
+      "crews": 2,
+      "assignments": [
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "plumbing-rough",
+          "duration": 3,
+          "start": 13,
+          "end": 16,
+          "crew": 0
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "plumbing-rough",
+          "duration": 4,
+          "start": 19,
+          "end": 23,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "plumbing-rough",
+          "duration": 5,
+          "start": 24,
+          "end": 29,
+          "crew": 0
+        },
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 25,
+          "end": 27,
+          "crew": 1
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "plumbing-rough",
+          "duration": 5,
+          "start": 29,
+          "end": 34,
+          "crew": 0
+        },
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "plumbing-rough",
+          "duration": 3,
+          "start": 34,
+          "end": 37,
+          "crew": 0
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 34,
+          "end": 36,
+          "crew": 1
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "plumbing-rough",
+          "duration": 6,
+          "start": 36,
+          "end": 42,
+          "crew": 1
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "plumbing-rough",
+          "duration": 4,
+          "start": 38,
+          "end": 42,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "plumbing-fit-off",
+          "duration": 3,
+          "start": 43,
+          "end": 46,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "plumbing-rough",
+          "duration": 5,
+          "start": 46,
+          "end": 51,
+          "crew": 0
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "plumbing-rough",
+          "duration": 4,
+          "start": 47,
+          "end": 51,
+          "crew": 1
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "plumbing-fit-off",
+          "duration": 3,
+          "start": 51,
+          "end": 54,
+          "crew": 0
+        },
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 51,
+          "end": 53,
+          "crew": 1
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 53,
+          "end": 55,
+          "crew": 1
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "plumbing-rough",
+          "duration": 4,
+          "start": 54,
+          "end": 58,
+          "crew": 0
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "plumbing-rough",
+          "duration": 4,
+          "start": 56,
+          "end": 60,
+          "crew": 1
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "plumbing-fit-off",
+          "duration": 3,
+          "start": 58,
+          "end": 61,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "plumbing-rough",
+          "duration": 4,
+          "start": 62,
+          "end": 66,
+          "crew": 0
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "plumbing-rough",
+          "duration": 3,
+          "start": 63,
+          "end": 66,
+          "crew": 1
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 66,
+          "end": 68,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 66,
+          "end": 68,
+          "crew": 1
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "plumbing-rough",
+          "duration": 3,
+          "start": 68,
+          "end": 71,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "plumbing-rough",
+          "duration": 3,
+          "start": 69,
+          "end": 72,
+          "crew": 1
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 71,
+          "end": 73,
+          "crew": 0
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 72,
+          "end": 74,
+          "crew": 1
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 75,
+          "end": 77,
+          "crew": 0
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "plumbing-fit-off",
+          "duration": 1,
+          "start": 78,
+          "end": 79,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 82,
+          "end": 84,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "plumbing-fit-off",
+          "duration": 2,
+          "start": 82,
+          "end": 84,
+          "crew": 1
+        }
+      ]
+    },
+    "electrician": {
+      "crews": 2,
+      "assignments": [
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "electrical-rough",
+          "duration": 2,
+          "start": 13,
+          "end": 15,
+          "crew": 0
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "electrical-rough",
+          "duration": 3,
+          "start": 19,
+          "end": 22,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "electrical-rough",
+          "duration": 4,
+          "start": 24,
+          "end": 28,
+          "crew": 0
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "electrical-rough",
+          "duration": 4,
+          "start": 29,
+          "end": 33,
+          "crew": 0
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "electrical-fit-out",
+          "duration": 2,
+          "start": 34,
+          "end": 36,
+          "crew": 0
+        },
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "electrical-rough",
+          "duration": 2,
+          "start": 35,
+          "end": 37,
+          "crew": 1
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "electrical-rough",
+          "duration": 4,
+          "start": 36,
+          "end": 40,
+          "crew": 0
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "electrical-rough",
+          "duration": 3,
+          "start": 38,
+          "end": 41,
+          "crew": 1
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "electrical-fit-out",
+          "duration": 2,
+          "start": 43,
+          "end": 45,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "electrical-rough",
+          "duration": 4,
+          "start": 46,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "electrical-rough",
+          "duration": 3,
+          "start": 47,
+          "end": 50,
+          "crew": 1
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "electrical-fit-out",
+          "duration": 2,
+          "start": 50,
+          "end": 52,
+          "crew": 0
+        },
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "electrical-fit-out",
+          "duration": 1,
+          "start": 50,
+          "end": 51,
+          "crew": 1
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "electrical-fit-out",
+          "duration": 2,
+          "start": 53,
+          "end": 55,
+          "crew": 0
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "electrical-rough",
+          "duration": 3,
+          "start": 54,
+          "end": 57,
+          "crew": 1
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "electrical-rough",
+          "duration": 3,
+          "start": 56,
+          "end": 59,
+          "crew": 0
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "electrical-fit-out",
+          "duration": 3,
+          "start": 57,
+          "end": 60,
+          "crew": 1
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "electrical-fit-out",
+          "duration": 2,
+          "start": 62,
+          "end": 64,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "electrical-rough",
+          "duration": 3,
+          "start": 62,
+          "end": 65,
+          "crew": 1
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "electrical-rough",
+          "duration": 2,
+          "start": 64,
+          "end": 66,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "electrical-fit-out",
+          "duration": 2,
+          "start": 65,
+          "end": 67,
+          "crew": 1
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "electrical-rough",
+          "duration": 2,
+          "start": 68,
+          "end": 70,
+          "crew": 0
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "electrical-fit-out",
+          "duration": 2,
+          "start": 69,
+          "end": 71,
+          "crew": 1
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "electrical-rough",
+          "duration": 2,
+          "start": 70,
+          "end": 72,
+          "crew": 0
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "electrical-fit-out",
+          "duration": 2,
+          "start": 72,
+          "end": 74,
+          "crew": 0
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "electrical-fit-out",
+          "duration": 1,
+          "start": 75,
+          "end": 76,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "electrical-fit-out",
+          "duration": 2,
+          "start": 77,
+          "end": 79,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "electrical-fit-out",
+          "duration": 1,
+          "start": 81,
+          "end": 82,
+          "crew": 0
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "electrical-fit-out",
+          "duration": 1,
+          "start": 83,
+          "end": 84,
+          "crew": 0
+        },
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "electrical-fit-out",
+          "duration": 1,
+          "start": 83,
+          "end": 84,
+          "crew": 1
+        }
+      ]
+    },
+    "gib-installer": {
+      "crews": 2,
+      "assignments": [
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "gib",
+          "duration": 5,
+          "start": 16,
+          "end": 21,
+          "crew": 0
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "gib",
+          "duration": 6,
+          "start": 23,
+          "end": 29,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "gib",
+          "duration": 8,
+          "start": 29,
+          "end": 37,
+          "crew": 0
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "gib",
+          "duration": 7,
+          "start": 35,
+          "end": 42,
+          "crew": 1
+        },
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "gib",
+          "duration": 5,
+          "start": 37,
+          "end": 42,
+          "crew": 0
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "gib",
+          "duration": 8,
+          "start": 42,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "gib",
+          "duration": 6,
+          "start": 42,
+          "end": 48,
+          "crew": 1
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "gib",
+          "duration": 6,
+          "start": 51,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "gib",
+          "duration": 7,
+          "start": 52,
+          "end": 59,
+          "crew": 1
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "gib",
+          "duration": 6,
+          "start": 58,
+          "end": 64,
+          "crew": 0
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "gib",
+          "duration": 6,
+          "start": 60,
+          "end": 66,
+          "crew": 1
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "gib",
+          "duration": 5,
+          "start": 66,
+          "end": 71,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "gib",
+          "duration": 6,
+          "start": 66,
+          "end": 72,
+          "crew": 1
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "gib",
+          "duration": 4,
+          "start": 71,
+          "end": 75,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "gib",
+          "duration": 5,
+          "start": 72,
+          "end": 77,
+          "crew": 1
+        }
+      ]
+    },
+    "painter": {
+      "crews": 2,
+      "assignments": [
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "painting",
+          "duration": 4,
+          "start": 21,
+          "end": 25,
+          "crew": 0
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "painting",
+          "duration": 5,
+          "start": 29,
+          "end": 34,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "painting",
+          "duration": 6,
+          "start": 37,
+          "end": 43,
+          "crew": 0
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "painting",
+          "duration": 6,
+          "start": 44,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "painting",
+          "duration": 4,
+          "start": 44,
+          "end": 48,
+          "crew": 1
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "painting",
+          "duration": 5,
+          "start": 48,
+          "end": 53,
+          "crew": 1
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "painting",
+          "duration": 7,
+          "start": 50,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "painting",
+          "duration": 5,
+          "start": 57,
+          "end": 62,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "painting",
+          "duration": 6,
+          "start": 59,
+          "end": 65,
+          "crew": 1
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "painting",
+          "duration": 5,
+          "start": 64,
+          "end": 69,
+          "crew": 0
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "painting",
+          "duration": 5,
+          "start": 67,
+          "end": 72,
+          "crew": 1
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "painting",
+          "duration": 4,
+          "start": 71,
+          "end": 75,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "painting",
+          "duration": 5,
+          "start": 72,
+          "end": 77,
+          "crew": 1
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "painting",
+          "duration": 3,
+          "start": 75,
+          "end": 78,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "painting",
+          "duration": 4,
+          "start": 77,
+          "end": 81,
+          "crew": 1
+        }
+      ]
+    },
+    "kitchen-installer": {
+      "crews": 1,
+      "assignments": [
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "kitchen",
+          "duration": 3,
+          "start": 34,
+          "end": 37,
+          "crew": 0
+        },
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "kitchen",
+          "duration": 3,
+          "start": 41,
+          "end": 44,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "kitchen",
+          "duration": 4,
+          "start": 44,
+          "end": 48,
+          "crew": 0
+        },
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "kitchen",
+          "duration": 2,
+          "start": 48,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "kitchen",
+          "duration": 4,
+          "start": 50,
+          "end": 54,
+          "crew": 0
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "kitchen",
+          "duration": 3,
+          "start": 54,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "kitchen",
+          "duration": 5,
+          "start": 57,
+          "end": 62,
+          "crew": 0
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "kitchen",
+          "duration": 3,
+          "start": 62,
+          "end": 65,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "kitchen",
+          "duration": 4,
+          "start": 65,
+          "end": 69,
+          "crew": 0
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "kitchen",
+          "duration": 3,
+          "start": 69,
+          "end": 72,
+          "crew": 0
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "kitchen",
+          "duration": 3,
+          "start": 72,
+          "end": 75,
+          "crew": 0
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "kitchen",
+          "duration": 2,
+          "start": 75,
+          "end": 77,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "kitchen",
+          "duration": 3,
+          "start": 77,
+          "end": 80,
+          "crew": 0
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "kitchen",
+          "duration": 2,
+          "start": 80,
+          "end": 82,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "kitchen",
+          "duration": 2,
+          "start": 82,
+          "end": 84,
+          "crew": 0
+        }
+      ]
+    },
+    "bathroom-installer": {
+      "crews": 1,
+      "assignments": [
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "bathroom",
+          "duration": 3,
+          "start": 41,
+          "end": 44,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "bathroom",
+          "duration": 4,
+          "start": 44,
+          "end": 48,
+          "crew": 0
+        },
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "bathroom",
+          "duration": 2,
+          "start": 48,
+          "end": 50,
+          "crew": 0
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "bathroom",
+          "duration": 4,
+          "start": 50,
+          "end": 54,
+          "crew": 0
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "bathroom",
+          "duration": 3,
+          "start": 54,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "bathroom",
+          "duration": 4,
+          "start": 57,
+          "end": 61,
+          "crew": 0
+        },
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "bathroom",
+          "duration": 2,
+          "start": 61,
+          "end": 63,
+          "crew": 0
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "bathroom",
+          "duration": 3,
+          "start": 63,
+          "end": 66,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "bathroom",
+          "duration": 3,
+          "start": 66,
+          "end": 69,
+          "crew": 0
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "bathroom",
+          "duration": 3,
+          "start": 69,
+          "end": 72,
+          "crew": 0
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "bathroom",
+          "duration": 3,
+          "start": 72,
+          "end": 75,
+          "crew": 0
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "bathroom",
+          "duration": 2,
+          "start": 75,
+          "end": 77,
+          "crew": 0
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "bathroom",
+          "duration": 3,
+          "start": 77,
+          "end": 80,
+          "crew": 0
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "bathroom",
+          "duration": 2,
+          "start": 80,
+          "end": 82,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "bathroom",
+          "duration": 2,
+          "start": 82,
+          "end": 84,
+          "crew": 0
+        }
+      ]
+    },
+    "tiler-floorer": {
+      "crews": 2,
+      "assignments": [
+        {
+          "job_id": "job-11",
+          "job_name": "15 Titoki Place",
+          "stage_id": "tiling-flooring",
+          "duration": 3,
+          "start": 25,
+          "end": 28,
+          "crew": 0
+        },
+        {
+          "job_id": "job-7",
+          "job_name": "34 Kauri Drive",
+          "stage_id": "tiling-flooring",
+          "duration": 3,
+          "start": 34,
+          "end": 37,
+          "crew": 0
+        },
+        {
+          "job_id": "job-8",
+          "job_name": "57 Harakeke Way",
+          "stage_id": "tiling-flooring",
+          "duration": 5,
+          "start": 43,
+          "end": 48,
+          "crew": 0
+        },
+        {
+          "job_id": "job-3",
+          "job_name": "78 Manuka Lane",
+          "stage_id": "tiling-flooring",
+          "duration": 3,
+          "start": 48,
+          "end": 51,
+          "crew": 0
+        },
+        {
+          "job_id": "job-6",
+          "job_name": "91 Nikau Street",
+          "stage_id": "tiling-flooring",
+          "duration": 4,
+          "start": 53,
+          "end": 57,
+          "crew": 0
+        },
+        {
+          "job_id": "job-4",
+          "job_name": "23 Pohutukawa Ave",
+          "stage_id": "tiling-flooring",
+          "duration": 5,
+          "start": 57,
+          "end": 62,
+          "crew": 0
+        },
+        {
+          "job_id": "job-12",
+          "job_name": "42 Matai Road",
+          "stage_id": "tiling-flooring",
+          "duration": 4,
+          "start": 65,
+          "end": 69,
+          "crew": 0
+        },
+        {
+          "job_id": "job-1",
+          "job_name": "12 Kowhai Road",
+          "stage_id": "tiling-flooring",
+          "duration": 4,
+          "start": 69,
+          "end": 73,
+          "crew": 0
+        },
+        {
+          "job_id": "job-2",
+          "job_name": "45 Rimu Terrace",
+          "stage_id": "tiling-flooring",
+          "duration": 5,
+          "start": 69,
+          "end": 74,
+          "crew": 1
+        },
+        {
+          "job_id": "job-15",
+          "job_name": "53 Kotukutuku Street",
+          "stage_id": "tiling-flooring",
+          "duration": 4,
+          "start": 73,
+          "end": 77,
+          "crew": 0
+        },
+        {
+          "job_id": "job-10",
+          "job_name": "88 Kanuka Rise",
+          "stage_id": "tiling-flooring",
+          "duration": 4,
+          "start": 74,
+          "end": 78,
+          "crew": 1
+        },
+        {
+          "job_id": "job-13",
+          "job_name": "67 Rewarewa Lane",
+          "stage_id": "tiling-flooring",
+          "duration": 3,
+          "start": 77,
+          "end": 80,
+          "crew": 0
+        },
+        {
+          "job_id": "job-5",
+          "job_name": "6 Totara Close",
+          "stage_id": "tiling-flooring",
+          "duration": 3,
+          "start": 78,
+          "end": 81,
+          "crew": 1
+        },
+        {
+          "job_id": "job-14",
+          "job_name": "29 Miro Grove",
+          "stage_id": "tiling-flooring",
+          "duration": 4,
+          "start": 80,
+          "end": 84,
+          "crew": 0
+        },
+        {
+          "job_id": "job-9",
+          "job_name": "3 Wattle Crescent",
+          "stage_id": "tiling-flooring",
+          "duration": 3,
+          "start": 81,
+          "end": 84,
+          "crew": 1
+        }
+      ]
+    }
+  }
 }
