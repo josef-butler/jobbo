@@ -13,7 +13,7 @@ make compare    # run what-if scenarios (writes comparison.json, ~3 min)
 make dev        # start the Vite dev server
 ```
 
-Then visit `http://localhost:5173/`. Append `?prototype` to reveal the prototype views.
+Then visit `http://localhost:5173/`. The prototype views appear at the root URL.
 
 Use `←` / `→` arrow keys or the floating bar at the bottom to cycle between variants.
 
@@ -21,9 +21,9 @@ Use `←` / `→` arrow keys or the floating bar at the bottom to cycle between 
 
 | Variant | URL | What it shows |
 |---|---|---|
-| **A — Trade Swimlane** | `?prototype&variant=A` | Per-trade Gantt with crew sub-lanes. "Who is where and when." Click a job bar to see all crews needed. Gap indicators and bottleneck badges flagged. |
-| **B — Job Matrix** | `?prototype&variant=B` | Job rows with crew-labeled stage bars. Left sidebar: trade utilisation bars (green/amber/red). Expand a job row to see its crew chip grid. Hover for a preview panel. |
-| **C — Scenario Planner** | `?prototype&variant=C` | What-if crew change comparison. Makespan bar chart, scenario cards with utilisation deltas, bottleneck deep-dive table, key finding + recommendation callouts. Compares 6 pre-computed scenarios. |
+| **A — Trade Swimlane** | `?variant=A` | Per-trade Gantt with crew sub-lanes. "Who is where and when." Click a job bar to see all crews needed. Gap indicators and bottleneck badges flagged. |
+| **B — Job Matrix** | `?variant=B` | Job rows with crew-labeled stage bars. Left sidebar: trade utilisation bars (green/amber/red). Expand a job row to see its crew chip grid. Hover for a preview panel. |
+| **C — Scenario Planner** | `?variant=C` | What-if crew change comparison. Makespan bar chart, scenario cards with utilisation deltas, bottleneck deep-dive table, key finding + recommendation callouts. Compares 6 pre-computed scenarios. |
 
 ## Architecture
 
