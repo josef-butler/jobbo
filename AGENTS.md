@@ -36,12 +36,13 @@ The frontend is a standalone Vite SPA that reads `output.json` at runtime.
 ## Commands
 
 ```
-make install    # pip install + pnpm install
-make solve      # run the OR-Tools solver
-make dev        # start the Vite dev server
+pip install -r solver/requirements.txt   # first time only
+cd apps/web && pnpm install             # first time only
+python solver/solver.py                 # run the OR-Tools solver
+cd apps/web && pnpm dev                 # start the Vite dev server
 ```
 
-After `make solve`, the frontend picks up changes on the next browser refresh.
+After running the solver, the frontend picks up changes on the next browser refresh.
 
 ## Interview workflow
 
@@ -55,7 +56,7 @@ After `make solve`, the frontend picks up changes on the next browser refresh.
    interviewer before proceeding. Reference `docs/MODELS.md` for which OR-Tools
    pattern fits the constraints.
 
-3. **Solve:** run `make solve`. A schedule appears in `apps/web/public/output.json`.
+3. **Solve:** run `python solver/solver.py`. A schedule appears in `apps/web/public/output.json`.
 
 4. **Demo:** visit `http://localhost:5173/?prototype` to show the list and timeline
    views. The root URL shows a blank landing page. Append `?prototype` only when
@@ -86,6 +87,6 @@ When generating code in this project:
 - Use `@base-ui/react` for interactive primitives (Dialog, Button). Do not use coss or shadcn.
 - Use Tailwind v4 utility classes only (no custom CSS).
 - Keep components self-contained in `apps/web/src/components/`.
-- The solver uses Python 3 and OR-Tools. Install with `make install`.
-- The frontend uses pnpm. Run with `make dev`.
+- The solver uses Python 3 and OR-Tools. Install with `pip install -r solver/requirements.txt`.
+- The frontend uses pnpm. Run with `cd apps/web && pnpm dev`.
 - Types are in `apps/web/src/types.ts`. Keep them in sync with the solver output schema.
