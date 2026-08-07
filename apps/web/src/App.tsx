@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Hammer } from "lucide-react";
 import { useSchedule } from "@/hooks/useSchedule";
 import type { JobSchedule, ViewMode } from "@/types";
@@ -6,8 +6,20 @@ import { JobList } from "@/components/JobList";
 import { GanttChart } from "@/components/GanttChart";
 import { JobDetail } from "@/components/JobDetail";
 import { TradeLegend } from "@/components/TradeLegend";
+import { PrototypeSwitcher } from "@/components/PrototypeSwitcher";
+import { VariantTradeSwimlane } from "@/components/VariantTradeSwimlane";
+import { VariantJobMatrix } from "@/components/VariantJobMatrix";
+import { VariantScenarioPlanner } from "@/components/VariantScenarioPlanner";
 
-const SHOW_PROTOTYPE = new URLSearchParams(window.location.search).has("prototype");
+const params = new URLSearchParams(window.location.search);
+const SHOW_PROTOTYPE = params.has("prototype");
+const VARIANT = params.get("variant") ?? "A";
+
+const VARIANTS = [
+  { key: "A", label: "Trade Swimlane — who is where & when" },
+  { key: "B", label: "Job Matrix — crews per job + utilisation" },
+  { key: "C", label: "Scenario Planner — what-if crew changes" },
+];
 
 export function App() {
   if (!SHOW_PROTOTYPE) return <Landing />;
@@ -36,8 +48,16 @@ function Landing() {
 /** Full prototype — append ?prototype to the URL to reveal. */
 function Prototype() {
   const { data, isLoading, error } = useSchedule();
+  const [variant, setVariant] = useState(VARIANT);
   const [view, setView] = useState<ViewMode>("gantt");
   const [selectedJob, setSelectedJob] = useState<JobSchedule | null>(null);
+
+  const handleVariantChange = useCallback((key: string) => {
+    setVariant(key);
+    const url = new URL(window.location.href);
+    url.searchParams.set("variant", key);
+    window.history.replaceState({}, "", url);
+  }, []);
 
   if (isLoading) {
     return (
@@ -55,8 +75,10 @@ function Prototype() {
     );
   }
 
+  const isNewVariant = variant === "A" || variant === "B" || variant === "C";
+
   return (
-    <div className="mx-auto max-w-7xl px-6 py-8">
+    <div className="mx-auto max-w-7xl px-6 py-8 pb-24">
       <header className="mb-8 flex items-end justify-between">
         <div>
           <h1 className="font-semibold text-2xl tracking-tight">
@@ -68,25 +90,33 @@ function Prototype() {
           </p>
         </div>
 
-        <div className="flex rounded-lg border border-zinc-800 bg-zinc-900 p-0.5">
-          {(["list", "gantt"] as ViewMode[]).map((mode) => (
-            <button
-              key={mode}
-              type="button"
-              onClick={() => setView(mode)}
-              className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
-                view === mode
-                  ? "bg-zinc-700 text-zinc-100"
-                  : "text-zinc-500 hover:text-zinc-300"
-              }`}
-            >
-              {mode === "list" ? "List" : "Timeline"}
-            </button>
-          ))}
-        </div>
+        {!isNewVariant && (
+          <div className="flex rounded-lg border border-zinc-800 bg-zinc-900 p-0.5">
+            {(["list", "gantt"] as ViewMode[]).map((mode) => (
+              <button
+                key={mode}
+                type="button"
+                onClick={() => setView(mode)}
+                className={`rounded-md px-3 py-1.5 text-sm font-medium transition-colors ${
+                  view === mode
+                    ? "bg-zinc-700 text-zinc-100"
+                    : "text-zinc-500 hover:text-zinc-300"
+                }`}
+              >
+                {mode === "list" ? "List" : "Timeline"}
+              </button>
+            ))}
+          </div>
+        )}
       </header>
 
-      {view === "list" ? (
+      {variant === "A" ? (
+        <VariantTradeSwimlane data={data} />
+      ) : variant === "B" ? (
+        <VariantJobMatrix data={data} />
+      ) : variant === "C" ? (
+        <VariantScenarioPlanner />
+      ) : view === "list" ? (
         <JobList jobs={data.schedule} onSelectJob={setSelectedJob} />
       ) : (
         <GanttChart
@@ -96,7 +126,7 @@ function Prototype() {
         />
       )}
 
-      <TradeLegend />
+      {!isNewVariant && <TradeLegend />}
 
       {selectedJob && (
         <JobDetail
@@ -105,6 +135,12 @@ function Prototype() {
           onClose={() => setSelectedJob(null)}
         />
       )}
+
+      <PrototypeSwitcher
+        variants={VARIANTS}
+        current={variant}
+        onChange={handleVariantChange}
+      />
     </div>
   );
 }

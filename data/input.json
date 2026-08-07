@@ -1,94 +1,285 @@
 {
   "trades": [
-    "excavator",
-    "concrete",
-    "carpenter",
-    "roofer",
-    "plumber",
-    "electrician",
-    "plasterer",
-    "painter",
-    "floorer"
+    { "name": "excavator", "crews": 1 },
+    { "name": "concrete", "crews": 1 },
+    { "name": "framer", "crews": 2 },
+    { "name": "plumber", "crews": 2 },
+    { "name": "electrician", "crews": 2 },
+    { "name": "gib-installer", "crews": 2 },
+    { "name": "painter", "crews": 2 },
+    { "name": "kitchen-installer", "crews": 1 },
+    { "name": "bathroom-installer", "crews": 1 },
+    { "name": "tiler-floorer", "crews": 2 }
   ],
   "jobs": [
     {
       "id": "job-1",
       "name": "12 Kowhai Road",
       "stages": [
-        { "id": "site-prep", "trade": "excavator", "duration": 2 },
-        { "id": "foundation", "trade": "concrete", "duration": 3 },
-        { "id": "framing", "trade": "carpenter", "duration": 8 },
-        { "id": "roof", "trade": "roofer", "duration": 3, "depends_on": ["framing"] },
+        { "id": "foundations", "trade": "excavator", "duration": 2 },
+        { "id": "slab", "trade": "concrete", "duration": 3 },
+        { "id": "framing", "trade": "framer", "duration": 8 },
         { "id": "plumbing-rough", "trade": "plumber", "duration": 4, "depends_on": ["framing"] },
         { "id": "electrical-rough", "trade": "electrician", "duration": 3, "depends_on": ["framing"] },
-        { "id": "plaster", "trade": "plasterer", "duration": 6, "depends_on": ["plumbing-rough", "electrical-rough"] },
-        { "id": "painting", "trade": "painter", "duration": 5, "depends_on": ["plaster"] },
-        { "id": "flooring", "trade": "floorer", "duration": 3, "depends_on": ["plaster"] },
-        { "id": "fit-off", "trade": "carpenter", "duration": 3, "depends_on": ["painting", "flooring"] }
+        { "id": "gib", "trade": "gib-installer", "duration": 6, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 5, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 2, "depends_on": ["painting"] }
       ]
     },
     {
       "id": "job-2",
       "name": "45 Rimu Terrace",
       "stages": [
-        { "id": "site-prep", "trade": "excavator", "duration": 3 },
-        { "id": "foundation", "trade": "concrete", "duration": 4 },
-        { "id": "framing", "trade": "carpenter", "duration": 10 },
-        { "id": "roof", "trade": "roofer", "duration": 4, "depends_on": ["framing"] },
+        { "id": "foundations", "trade": "excavator", "duration": 3 },
+        { "id": "slab", "trade": "concrete", "duration": 4 },
+        { "id": "framing", "trade": "framer", "duration": 10 },
         { "id": "plumbing-rough", "trade": "plumber", "duration": 5, "depends_on": ["framing"] },
         { "id": "electrical-rough", "trade": "electrician", "duration": 4, "depends_on": ["framing"] },
-        { "id": "plaster", "trade": "plasterer", "duration": 7, "depends_on": ["plumbing-rough", "electrical-rough", "roof"] },
-        { "id": "painting", "trade": "painter", "duration": 6, "depends_on": ["plaster"] },
-        { "id": "flooring", "trade": "floorer", "duration": 4, "depends_on": ["plaster"] },
-        { "id": "fit-off", "trade": "carpenter", "duration": 4, "depends_on": ["painting", "flooring"] }
+        { "id": "gib", "trade": "gib-installer", "duration": 7, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 6, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 5, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 3, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 2, "depends_on": ["painting"] }
       ]
     },
     {
       "id": "job-3",
       "name": "78 Manuka Lane",
       "stages": [
-        { "id": "site-prep", "trade": "excavator", "duration": 2 },
-        { "id": "foundation", "trade": "concrete", "duration": 3 },
-        { "id": "framing", "trade": "carpenter", "duration": 7 },
-        { "id": "roof", "trade": "roofer", "duration": 2, "depends_on": ["framing"] },
+        { "id": "foundations", "trade": "excavator", "duration": 2 },
+        { "id": "slab", "trade": "concrete", "duration": 2 },
+        { "id": "framing", "trade": "framer", "duration": 7 },
         { "id": "plumbing-rough", "trade": "plumber", "duration": 3, "depends_on": ["framing"] },
         { "id": "electrical-rough", "trade": "electrician", "duration": 2, "depends_on": ["framing"] },
-        { "id": "plaster", "trade": "plasterer", "duration": 5, "depends_on": ["plumbing-rough", "electrical-rough"] },
-        { "id": "painting", "trade": "painter", "duration": 4, "depends_on": ["plaster"] },
-        { "id": "flooring", "trade": "floorer", "duration": 2, "depends_on": ["plaster"] },
-        { "id": "fit-off", "trade": "carpenter", "duration": 2, "depends_on": ["painting", "flooring"] }
+        { "id": "gib", "trade": "gib-installer", "duration": 5, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 4, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 2, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 2, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 1, "depends_on": ["painting"] }
       ]
     },
     {
       "id": "job-4",
       "name": "23 Pohutukawa Ave",
       "stages": [
-        { "id": "site-prep", "trade": "excavator", "duration": 4 },
-        { "id": "foundation", "trade": "concrete", "duration": 5 },
-        { "id": "framing", "trade": "carpenter", "duration": 12 },
-        { "id": "roof", "trade": "roofer", "duration": 5, "depends_on": ["framing"] },
+        { "id": "foundations", "trade": "excavator", "duration": 4 },
+        { "id": "slab", "trade": "concrete", "duration": 5 },
+        { "id": "framing", "trade": "framer", "duration": 12 },
         { "id": "plumbing-rough", "trade": "plumber", "duration": 6, "depends_on": ["framing"] },
         { "id": "electrical-rough", "trade": "electrician", "duration": 4, "depends_on": ["framing"] },
-        { "id": "plaster", "trade": "plasterer", "duration": 8, "depends_on": ["plumbing-rough", "electrical-rough", "roof"] },
-        { "id": "painting", "trade": "painter", "duration": 7, "depends_on": ["plaster"] },
-        { "id": "flooring", "trade": "floorer", "duration": 4, "depends_on": ["plaster"] },
-        { "id": "fit-off", "trade": "carpenter", "duration": 4, "depends_on": ["painting", "flooring"] }
+        { "id": "gib", "trade": "gib-installer", "duration": 8, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 7, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 5, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 5, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 3, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 3, "depends_on": ["painting"] }
       ]
     },
     {
       "id": "job-5",
       "name": "6 Totara Close",
       "stages": [
-        { "id": "site-prep", "trade": "excavator", "duration": 2 },
-        { "id": "foundation", "trade": "concrete", "duration": 2 },
-        { "id": "framing", "trade": "carpenter", "duration": 6 },
-        { "id": "roof", "trade": "roofer", "duration": 2, "depends_on": ["framing"] },
+        { "id": "foundations", "trade": "excavator", "duration": 2 },
+        { "id": "slab", "trade": "concrete", "duration": 2 },
+        { "id": "framing", "trade": "framer", "duration": 6 },
         { "id": "plumbing-rough", "trade": "plumber", "duration": 3, "depends_on": ["framing"] },
         { "id": "electrical-rough", "trade": "electrician", "duration": 2, "depends_on": ["framing"] },
-        { "id": "plaster", "trade": "plasterer", "duration": 4, "depends_on": ["plumbing-rough", "electrical-rough"] },
-        { "id": "painting", "trade": "painter", "duration": 3, "depends_on": ["plaster"] },
-        { "id": "flooring", "trade": "floorer", "duration": 2, "depends_on": ["plaster"] },
-        { "id": "fit-off", "trade": "carpenter", "duration": 2, "depends_on": ["painting", "flooring"] }
+        { "id": "gib", "trade": "gib-installer", "duration": 4, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 3, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 2, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 2, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 1, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 1, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-6",
+      "name": "91 Nikau Street",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 3 },
+        { "id": "slab", "trade": "concrete", "duration": 3 },
+        { "id": "framing", "trade": "framer", "duration": 9 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 4, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 3, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 6, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 5, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 2, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-7",
+      "name": "34 Kauri Drive",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 2 },
+        { "id": "slab", "trade": "concrete", "duration": 3 },
+        { "id": "framing", "trade": "framer", "duration": 8 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 4, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 3, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 6, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 5, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 2, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-8",
+      "name": "57 Harakeke Way",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 3 },
+        { "id": "slab", "trade": "concrete", "duration": 4 },
+        { "id": "framing", "trade": "framer", "duration": 11 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 5, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 4, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 8, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 6, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 5, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 3, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 2, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-9",
+      "name": "3 Wattle Crescent",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 2 },
+        { "id": "slab", "trade": "concrete", "duration": 2 },
+        { "id": "framing", "trade": "framer", "duration": 6 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 3, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 2, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 5, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 4, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 2, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 2, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 1, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-10",
+      "name": "88 Kanuka Rise",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 3 },
+        { "id": "slab", "trade": "concrete", "duration": 3 },
+        { "id": "framing", "trade": "framer", "duration": 9 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 4, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 3, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 6, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 5, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 2, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-11",
+      "name": "15 Titoki Place",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 2 },
+        { "id": "slab", "trade": "concrete", "duration": 2 },
+        { "id": "framing", "trade": "framer", "duration": 7 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 3, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 2, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 5, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 4, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 2, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 1, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-12",
+      "name": "42 Matai Road",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 4 },
+        { "id": "slab", "trade": "concrete", "duration": 4 },
+        { "id": "framing", "trade": "framer", "duration": 10 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 5, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 4, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 7, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 6, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 2, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-13",
+      "name": "67 Rewarewa Lane",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 2 },
+        { "id": "slab", "trade": "concrete", "duration": 2 },
+        { "id": "framing", "trade": "framer", "duration": 7 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 3, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 2, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 5, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 4, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 2, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 2, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 1, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-14",
+      "name": "29 Miro Grove",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 3 },
+        { "id": "slab", "trade": "concrete", "duration": 3 },
+        { "id": "framing", "trade": "framer", "duration": 8 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 4, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 3, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 6, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 5, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 2, "depends_on": ["painting"] }
+      ]
+    },
+    {
+      "id": "job-15",
+      "name": "53 Kotukutuku Street",
+      "stages": [
+        { "id": "foundations", "trade": "excavator", "duration": 2 },
+        { "id": "slab", "trade": "concrete", "duration": 3 },
+        { "id": "framing", "trade": "framer", "duration": 9 },
+        { "id": "plumbing-rough", "trade": "plumber", "duration": 4, "depends_on": ["framing"] },
+        { "id": "electrical-rough", "trade": "electrician", "duration": 3, "depends_on": ["framing"] },
+        { "id": "gib", "trade": "gib-installer", "duration": 6, "depends_on": ["plumbing-rough", "electrical-rough"] },
+        { "id": "painting", "trade": "painter", "duration": 5, "depends_on": ["gib"] },
+        { "id": "kitchen", "trade": "kitchen-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "bathroom", "trade": "bathroom-installer", "duration": 3, "depends_on": ["painting"] },
+        { "id": "tiling-flooring", "trade": "tiler-floorer", "duration": 4, "depends_on": ["painting"] },
+        { "id": "plumbing-fit-off", "trade": "plumber", "duration": 2, "depends_on": ["painting"] },
+        { "id": "electrical-fit-out", "trade": "electrician", "duration": 2, "depends_on": ["painting"] }
       ]
     }
   ]

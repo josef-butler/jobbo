@@ -1,0 +1,501 @@
+{
+  "baseline": {
+    "makespan": 84,
+    "optimal": false,
+    "wall_time": 30.01,
+    "trade_util": {
+      "excavator": {
+        "crews": 1,
+        "util_pct": 46,
+        "tasks": 15
+      },
+      "concrete": {
+        "crews": 1,
+        "util_pct": 54,
+        "tasks": 15
+      },
+      "framer": {
+        "crews": 2,
+        "util_pct": 76,
+        "tasks": 15
+      },
+      "plumber": {
+        "crews": 2,
+        "util_pct": 55,
+        "tasks": 30
+      },
+      "electrician": {
+        "crews": 2,
+        "util_pct": 42,
+        "tasks": 30
+      },
+      "gib-installer": {
+        "crews": 2,
+        "util_pct": 54,
+        "tasks": 15
+      },
+      "painter": {
+        "crews": 2,
+        "util_pct": 44,
+        "tasks": 15
+      },
+      "kitchen-installer": {
+        "crews": 1,
+        "util_pct": 55,
+        "tasks": 15
+      },
+      "bathroom-installer": {
+        "crews": 1,
+        "util_pct": 51,
+        "tasks": 15
+      },
+      "tiler-floorer": {
+        "crews": 2,
+        "util_pct": 34,
+        "tasks": 15
+      }
+    },
+    "crew_overrides": {
+      "excavator": 1,
+      "concrete": 1,
+      "framer": 2,
+      "plumber": 2,
+      "electrician": 2,
+      "gib-installer": 2,
+      "painter": 2,
+      "kitchen-installer": 1,
+      "bathroom-installer": 1,
+      "tiler-floorer": 2
+    },
+    "id": "baseline",
+    "label": "Current crew counts"
+  },
+  "scenarios": [
+    {
+      "makespan": 84,
+      "optimal": false,
+      "wall_time": 30.01,
+      "trade_util": {
+        "excavator": {
+          "crews": 1,
+          "util_pct": 46,
+          "tasks": 15
+        },
+        "concrete": {
+          "crews": 1,
+          "util_pct": 54,
+          "tasks": 15
+        },
+        "framer": {
+          "crews": 2,
+          "util_pct": 76,
+          "tasks": 15
+        },
+        "plumber": {
+          "crews": 2,
+          "util_pct": 55,
+          "tasks": 30
+        },
+        "electrician": {
+          "crews": 2,
+          "util_pct": 42,
+          "tasks": 30
+        },
+        "gib-installer": {
+          "crews": 2,
+          "util_pct": 54,
+          "tasks": 15
+        },
+        "painter": {
+          "crews": 2,
+          "util_pct": 44,
+          "tasks": 15
+        },
+        "kitchen-installer": {
+          "crews": 1,
+          "util_pct": 55,
+          "tasks": 15
+        },
+        "bathroom-installer": {
+          "crews": 1,
+          "util_pct": 51,
+          "tasks": 15
+        },
+        "tiler-floorer": {
+          "crews": 2,
+          "util_pct": 34,
+          "tasks": 15
+        }
+      },
+      "crew_overrides": {
+        "excavator": 1,
+        "concrete": 1,
+        "framer": 2,
+        "plumber": 2,
+        "electrician": 2,
+        "gib-installer": 2,
+        "painter": 2,
+        "kitchen-installer": 1,
+        "bathroom-installer": 1,
+        "tiler-floorer": 2
+      },
+      "id": "baseline",
+      "label": "Current crew counts"
+    },
+    {
+      "makespan": 84,
+      "optimal": false,
+      "wall_time": 30.01,
+      "trade_util": {
+        "excavator": {
+          "crews": 1,
+          "util_pct": 46,
+          "tasks": 15
+        },
+        "concrete": {
+          "crews": 2,
+          "util_pct": 27,
+          "tasks": 15
+        },
+        "framer": {
+          "crews": 2,
+          "util_pct": 76,
+          "tasks": 15
+        },
+        "plumber": {
+          "crews": 2,
+          "util_pct": 55,
+          "tasks": 30
+        },
+        "electrician": {
+          "crews": 2,
+          "util_pct": 42,
+          "tasks": 30
+        },
+        "gib-installer": {
+          "crews": 2,
+          "util_pct": 54,
+          "tasks": 15
+        },
+        "painter": {
+          "crews": 2,
+          "util_pct": 44,
+          "tasks": 15
+        },
+        "kitchen-installer": {
+          "crews": 1,
+          "util_pct": 55,
+          "tasks": 15
+        },
+        "bathroom-installer": {
+          "crews": 1,
+          "util_pct": 51,
+          "tasks": 15
+        },
+        "tiler-floorer": {
+          "crews": 2,
+          "util_pct": 34,
+          "tasks": 15
+        }
+      },
+      "crew_overrides": {
+        "excavator": 1,
+        "concrete": 2,
+        "framer": 2,
+        "plumber": 2,
+        "electrician": 2,
+        "gib-installer": 2,
+        "painter": 2,
+        "kitchen-installer": 1,
+        "bathroom-installer": 1,
+        "tiler-floorer": 2
+      },
+      "id": "concrete-x2",
+      "label": "+1 concrete crew (2 total)"
+    },
+    {
+      "makespan": 83,
+      "optimal": true,
+      "wall_time": 7.88,
+      "trade_util": {
+        "excavator": {
+          "crews": 2,
+          "util_pct": 23,
+          "tasks": 15
+        },
+        "concrete": {
+          "crews": 2,
+          "util_pct": 27,
+          "tasks": 15
+        },
+        "framer": {
+          "crews": 2,
+          "util_pct": 77,
+          "tasks": 15
+        },
+        "plumber": {
+          "crews": 2,
+          "util_pct": 55,
+          "tasks": 30
+        },
+        "electrician": {
+          "crews": 2,
+          "util_pct": 42,
+          "tasks": 30
+        },
+        "gib-installer": {
+          "crews": 2,
+          "util_pct": 54,
+          "tasks": 15
+        },
+        "painter": {
+          "crews": 2,
+          "util_pct": 45,
+          "tasks": 15
+        },
+        "kitchen-installer": {
+          "crews": 1,
+          "util_pct": 55,
+          "tasks": 15
+        },
+        "bathroom-installer": {
+          "crews": 1,
+          "util_pct": 52,
+          "tasks": 15
+        },
+        "tiler-floorer": {
+          "crews": 2,
+          "util_pct": 34,
+          "tasks": 15
+        }
+      },
+      "crew_overrides": {
+        "excavator": 2,
+        "concrete": 2,
+        "framer": 2,
+        "plumber": 2,
+        "electrician": 2,
+        "gib-installer": 2,
+        "painter": 2,
+        "kitchen-installer": 1,
+        "bathroom-installer": 1,
+        "tiler-floorer": 2
+      },
+      "id": "concrete-excavator-x2",
+      "label": "+1 concrete + +1 excavator (2 each)"
+    },
+    {
+      "makespan": 85,
+      "optimal": false,
+      "wall_time": 30.01,
+      "trade_util": {
+        "excavator": {
+          "crews": 2,
+          "util_pct": 23,
+          "tasks": 15
+        },
+        "concrete": {
+          "crews": 1,
+          "util_pct": 53,
+          "tasks": 15
+        },
+        "framer": {
+          "crews": 2,
+          "util_pct": 75,
+          "tasks": 15
+        },
+        "plumber": {
+          "crews": 2,
+          "util_pct": 54,
+          "tasks": 30
+        },
+        "electrician": {
+          "crews": 2,
+          "util_pct": 41,
+          "tasks": 30
+        },
+        "gib-installer": {
+          "crews": 2,
+          "util_pct": 53,
+          "tasks": 15
+        },
+        "painter": {
+          "crews": 2,
+          "util_pct": 44,
+          "tasks": 15
+        },
+        "kitchen-installer": {
+          "crews": 1,
+          "util_pct": 54,
+          "tasks": 15
+        },
+        "bathroom-installer": {
+          "crews": 1,
+          "util_pct": 51,
+          "tasks": 15
+        },
+        "tiler-floorer": {
+          "crews": 2,
+          "util_pct": 34,
+          "tasks": 15
+        }
+      },
+      "crew_overrides": {
+        "excavator": 2,
+        "concrete": 1,
+        "framer": 2,
+        "plumber": 2,
+        "electrician": 2,
+        "gib-installer": 2,
+        "painter": 2,
+        "kitchen-installer": 1,
+        "bathroom-installer": 1,
+        "tiler-floorer": 2
+      },
+      "id": "excavator-x2",
+      "label": "+1 excavator crew (2 total)"
+    },
+    {
+      "makespan": 83,
+      "optimal": true,
+      "wall_time": 4.04,
+      "trade_util": {
+        "excavator": {
+          "crews": 1,
+          "util_pct": 47,
+          "tasks": 15
+        },
+        "concrete": {
+          "crews": 1,
+          "util_pct": 54,
+          "tasks": 15
+        },
+        "framer": {
+          "crews": 2,
+          "util_pct": 77,
+          "tasks": 15
+        },
+        "plumber": {
+          "crews": 2,
+          "util_pct": 55,
+          "tasks": 30
+        },
+        "electrician": {
+          "crews": 2,
+          "util_pct": 42,
+          "tasks": 30
+        },
+        "gib-installer": {
+          "crews": 2,
+          "util_pct": 54,
+          "tasks": 15
+        },
+        "painter": {
+          "crews": 2,
+          "util_pct": 45,
+          "tasks": 15
+        },
+        "kitchen-installer": {
+          "crews": 2,
+          "util_pct": 28,
+          "tasks": 15
+        },
+        "bathroom-installer": {
+          "crews": 2,
+          "util_pct": 26,
+          "tasks": 15
+        },
+        "tiler-floorer": {
+          "crews": 2,
+          "util_pct": 34,
+          "tasks": 15
+        }
+      },
+      "crew_overrides": {
+        "excavator": 1,
+        "concrete": 1,
+        "framer": 2,
+        "plumber": 2,
+        "electrician": 2,
+        "gib-installer": 2,
+        "painter": 2,
+        "kitchen-installer": 2,
+        "bathroom-installer": 2,
+        "tiler-floorer": 2
+      },
+      "id": "kitchen-bathroom-x2",
+      "label": "+1 kitchen + +1 bathroom installer"
+    },
+    {
+      "makespan": 82,
+      "optimal": true,
+      "wall_time": 0.34,
+      "trade_util": {
+        "excavator": {
+          "crews": 2,
+          "util_pct": 24,
+          "tasks": 15
+        },
+        "concrete": {
+          "crews": 2,
+          "util_pct": 27,
+          "tasks": 15
+        },
+        "framer": {
+          "crews": 2,
+          "util_pct": 77,
+          "tasks": 15
+        },
+        "plumber": {
+          "crews": 2,
+          "util_pct": 56,
+          "tasks": 30
+        },
+        "electrician": {
+          "crews": 2,
+          "util_pct": 43,
+          "tasks": 30
+        },
+        "gib-installer": {
+          "crews": 2,
+          "util_pct": 55,
+          "tasks": 15
+        },
+        "painter": {
+          "crews": 2,
+          "util_pct": 45,
+          "tasks": 15
+        },
+        "kitchen-installer": {
+          "crews": 2,
+          "util_pct": 28,
+          "tasks": 15
+        },
+        "bathroom-installer": {
+          "crews": 2,
+          "util_pct": 26,
+          "tasks": 15
+        },
+        "tiler-floorer": {
+          "crews": 2,
+          "util_pct": 35,
+          "tasks": 15
+        }
+      },
+      "crew_overrides": {
+        "excavator": 2,
+        "concrete": 2,
+        "framer": 2,
+        "plumber": 2,
+        "electrician": 2,
+        "gib-installer": 2,
+        "painter": 2,
+        "kitchen-installer": 2,
+        "bathroom-installer": 2,
+        "tiler-floorer": 2
+      },
+      "id": "all-bottlenecks-x2",
+      "label": "2 crews on all single-crew trades"
+    }
+  ]
+}

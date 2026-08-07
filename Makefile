@@ -1,7 +1,10 @@
-.PHONY: solve dev install
+.PHONY: solve dev install compare
 
 solve:
 	@python solver/solver.py
+
+compare:
+	@python solver/compare.py
 
 dev:
 	@cd apps/web && pnpm dev
