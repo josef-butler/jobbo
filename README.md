@@ -9,21 +9,9 @@ Built with Python (OR-Tools CP-SAT solver) and TypeScript (Vite + React + Tailwi
 Sample output data is already included in the repo. If you just want to browse the
 frontend, you only need the dev server.
 
-### With Make
-
 ```bash
-make install    # pnpm install (first time only)
-make dev        # start the Vite dev server
-```
-
-### Without Make
-
-```bash
-# First time only:
-cd apps/web && pnpm install && cd ../..
-
-# Start the dev server:
-cd apps/web && pnpm dev
+cd apps/web && pnpm install   # first time only
+cd apps/web && pnpm dev       # start the Vite dev server
 ```
 
 Then visit `http://localhost:5173/`. The prototype views appear at the root URL.
@@ -33,17 +21,9 @@ Then visit `http://localhost:5173/`. The prototype views appear at the root URL.
 To generate a fresh schedule from `data/input.json`:
 
 ```bash
-make install    # pip install + pnpm install (first time only)
-make solve      # run the OR-Tools solver
-make compare    # run what-if scenarios (~3 min)
-```
-
-Or without Make:
-
-```bash
-pip install -r solver/requirements.txt
-python solver/solver.py
-python solver/compare.py
+pip install -r solver/requirements.txt   # first time only
+python solver/solver.py                  # run the OR-Tools solver
+python solver/compare.py                 # run what-if scenarios (~3 min)
 ```
 
 Use `←` / `→` arrow keys or the floating bar at the bottom to cycle between variants.
