@@ -1,5 +1,4 @@
 import { useCallback, useState } from "react";
-import { Hammer } from "lucide-react";
 import { useSchedule } from "@/hooks/useSchedule";
 import type { JobSchedule, ViewMode } from "@/types";
 import { JobList } from "@/components/JobList";
@@ -12,7 +11,6 @@ import { VariantJobMatrix } from "@/components/VariantJobMatrix";
 import { VariantScenarioPlanner } from "@/components/VariantScenarioPlanner";
 
 const params = new URLSearchParams(window.location.search);
-const SHOW_PROTOTYPE = params.has("prototype");
 const VARIANT = params.get("variant") ?? "A";
 
 const VARIANTS = [
@@ -22,30 +20,9 @@ const VARIANTS = [
 ];
 
 export function App() {
-  if (!SHOW_PROTOTYPE) return <Landing />;
   return <Prototype />;
 }
 
-/** Blank canvas shown to stakeholders during requirements gathering. */
-function Landing() {
-  return (
-    <div className="flex h-screen items-center">
-      <div className="ml-[12.5%] max-w-md">
-        <div className="mb-6 flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-amber-500/10">
-            <Hammer className="h-5 w-5 text-amber-500" />
-          </span>
-          <span className="font-semibold text-lg tracking-tight text-zinc-500">Jobbo</span>
-        </div>
-        <p className="text-xl leading-relaxed text-zinc-300">
-          A system for tracking and managing construction jobs.
-        </p>
-      </div>
-    </div>
-  );
-}
-
-/** Full prototype — append ?prototype to the URL to reveal. */
 function Prototype() {
   const { data, isLoading, error } = useSchedule();
   const [variant, setVariant] = useState(VARIANT);
